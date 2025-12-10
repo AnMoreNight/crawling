@@ -1,0 +1,22 @@
+{
+  "Excel Sample": [
+    {
+      "url": "https://www.konanhanbai.jp/",
+      "status": 0,
+      "error": "CrawlerEngine.__init__() got an unexpected keyword argument 'timeout'",
+      "crawl_status": "error"
+    },
+    {
+      "url": "http://www.wedding-b.com/",
+      "status": 0,
+      "error": "CrawlerEngine.__init__() got an unexpected keyword argument 'timeout'",
+      "crawl_status": "error"
+    },
+    {
+      "url": "http://mcc-muguet.jp/",
+      "status": 0,
+      "error": "CrawlerEngine.__init__() got an unexpected keyword argument 'timeout'",
+      "crawl_status": "error"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "Excel Sample": [
+    {
+      "url": "https://www.konanhanbai.jp/",
+      "status": 200,
+      "error": null,
+      "email": null,
+      "form": "/koform/",
+      "company": "コナン販売株式会社",
+      "crawl_status": "success"
+    },
+    {
+      "url": "http://www.wedding-b.com/",
+      "status": 200,
+      "error": null,
+      "email": null,
+      "form": "https://www.wedding-b.com/contactus.html",
+      "company": "結婚相談のウエディング・ベル",
+      "crawl_status": "success"
+    },
+    {
+      "url": "http://mcc-muguet.jp/",
+      "status": 200,
+      "error": null,
+      "email": null,
+      "form": "contact.html",
+      "company": "エムシー・くりえーと WeddingMethodみゅげ｜婚活サポート・司会",
+      "crawl_status": "success"
+    }
+  ]
+}

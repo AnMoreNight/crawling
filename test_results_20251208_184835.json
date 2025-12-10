@@ -1,0 +1,31 @@
+{
+  "Excel Sample": [
+    {
+      "url": "https://www.konanhanbai.jp/",
+      "status": 0,
+      "error": "'PageFetcher' object has no attribute 'fetch'",
+      "email": null,
+      "form": null,
+      "company": null,
+      "crawl_status": "error"
+    },
+    {
+      "url": "http://www.wedding-b.com/",
+      "status": 0,
+      "error": "'PageFetcher' object has no attribute 'fetch'",
+      "email": null,
+      "form": null,
+      "company": null,
+      "crawl_status": "error"
+    },
+    {
+      "url": "http://mcc-muguet.jp/",
+      "status": 0,
+      "error": "'PageFetcher' object has no attribute 'fetch'",
+      "email": null,
+      "form": null,
+      "company": null,
+      "crawl_status": "error"
+    }
+  ]
+}

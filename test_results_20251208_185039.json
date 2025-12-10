@@ -1,0 +1,31 @@
+{
+  "Excel Sample": [
+    {
+      "url": "https://www.konanhanbai.jp/",
+      "status": 200,
+      "error": "'HTMLParser' object has no attribute 'detect_contact_form'",
+      "email": null,
+      "form": null,
+      "company": null,
+      "crawl_status": "error"
+    },
+    {
+      "url": "http://www.wedding-b.com/",
+      "status": 200,
+      "error": "'HTMLParser' object has no attribute 'detect_contact_form'",
+      "email": null,
+      "form": null,
+      "company": null,
+      "crawl_status": "error"
+    },
+    {
+      "url": "http://mcc-muguet.jp/",
+      "status": 200,
+      "error": "'HTMLParser' object has no attribute 'detect_contact_form'",
+      "email": null,
+      "form": null,
+      "company": null,
+      "crawl_status": "error"
+    }
+  ]
+}
