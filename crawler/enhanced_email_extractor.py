@@ -1,158 +1,331 @@
 """
-Enhanced Email Extraction Module
-Focused on finding primary business contact emails
+Upgraded Email Extraction Module
+Advanced extraction with context awareness and company domain detection
 """
 
 import re
 import logging
-from typing import List, Optional, Set, Tuple
+from typing import List, Optional, Set, Tuple, Dict
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
 
 
-class EnhancedEmailExtractor:
-    """Enhanced email extraction focused on business contact emails."""
+class UpgradedEmailExtractor:
+    """Advanced email extraction with context awareness and domain intelligence."""
     
-    # Email regex pattern
+    # Enhanced email regex (handles international domains)
     EMAIL_PATTERN = re.compile(
-        r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b',
+        re.UNICODE
     )
     
     # Common non-business email domains to exclude
     EXCLUDE_DOMAINS = {
         'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com',
         'aol.com', 'mail.com', 'protonmail.com', 'icloud.com',
-        'qq.com', 'sina.com', 'gmail.jp', 'yahoo.co.jp'
+        'qq.com', 'sina.com', 'gmail.jp', 'yahoo.co.jp',
+        '163.com', '126.com', '139.com', 'naver.com', 'daum.net'
     }
     
-    # Priority keywords for business emails
-    PRIORITY_KEYWORDS = [
-        'contact', 'info', 'inquiry', 'business', 'support',
-        'sales', 'support', 'hello', 'team',
-        'お問い合わせ', '問い合わせ', 'info', 'contact'
+    # Strict reject patterns (automated/system emails)
+    REJECT_PATTERNS = [
+        'noreply', 'no-reply', 'no_reply', 'donotreply',
+        'notification', 'alert', 'system', 'robot', 'bot',
+        'automated', 'auto-reply', 'bounce'
     ]
     
+    # Priority keywords for business/contact emails (fixed UTF-8)
+    PRIORITY_KEYWORDS = {
+        'en': [
+            'contact', 'info', 'inquiry', 'business', 'support',
+            'sales', 'hello', 'team', 'admin', 'representative',
+            'manager', 'director', 'ceo', 'president', 'enquiry',
+            'service', 'help', 'assistance', 'general'
+        ],
+        'ja': [
+            'お問い合わせ', '問い合わせ', 'info', 'contact',
+            'inquiry', 'support', '相談', '営業', 'sales'
+        ]
+    }
+    
+    # High-value page sections (contact-related)
+    CONTACT_SECTIONS = [
+        'contact', 'footer', 'inquiry', 'support', 'help',
+        'about', 'company-info', 'company-contact', 'reach-us',
+        'お問い合わせ', '問い合わせ', 'contact-us', 'get-in-touch'
+    ]
+    
+    # Low-value page sections (author bios, comments, etc)
+    LOW_VALUE_SECTIONS = [
+        'comment', 'author', 'blog', 'article', 'post', 'news',
+        'sidebar', 'related', 'social', 'follow'
+    ]
+
     @staticmethod
-    def extract_emails(html_content: str, domain: str = None) -> List[str]:
+    def _extract_domain_from_url(url: str) -> Optional[str]:
+        """Extract domain from URL (e.g., 'example.com' from 'https://www.example.com')."""
+        try:
+            parsed = urlparse(url)
+            domain = parsed.netloc.lower()
+            # Remove www. prefix
+            if domain.startswith('www.'):
+                domain = domain[4:]
+            return domain
+        except Exception:
+            return None
+
+    @staticmethod
+    def _get_element_context_score(element) -> int:
         """
-        Extract business emails from HTML content.
+        Score based on where the email appears in the page.
+        Higher score = more likely to be primary contact.
+        """
+        score = 0
+        
+        # Walk up the DOM tree to find parent sections
+        parent = element.parent
+        while parent:
+            parent_str = str(parent).lower()
+            parent_class = parent.get('class', [])
+            parent_id = parent.get('id', '').lower()
+            
+            # Check for high-value sections
+            for section in UpgradedEmailExtractor.CONTACT_SECTIONS:
+                if (section in parent_class or section in parent_id or 
+                    section in parent_str[:200]):  # Check early content
+                    score += 25
+                    break
+            
+            # Penalize low-value sections
+            for section in UpgradedEmailExtractor.LOW_VALUE_SECTIONS:
+                if section in parent_class or section in parent_id:
+                    score -= 15
+                    break
+            
+            parent = parent.parent
+        
+        return score
+
+    @staticmethod
+    def extract_emails(html_content: str, page_url: str = None) -> List[Dict[str, any]]:
+        """
+        Extract business emails with context and scoring.
         
         Args:
             html_content: HTML content to parse
-            domain: Domain name for filtering (e.g., 'example.com')
+            page_url: The page URL (for company domain detection)
             
         Returns:
-            List of unique emails found
+            List of dicts with 'email', 'score', 'source' keys
         """
         if not html_content:
             return []
         
-        emails = set()
+        emails_dict = {}  # email -> {score, sources, context_score}
+        company_domain = None
+        
+        if page_url:
+            company_domain = UpgradedEmailExtractor._extract_domain_from_url(page_url)
         
         try:
-            # Parse HTML
             soup = BeautifulSoup(html_content, 'html.parser')
             
-            # Remove script and style elements
-            for script in soup(['script', 'style', 'meta']):
-                script.decompose()
+            # Remove noise
+            for element in soup(['script', 'style']):
+                element.decompose()
             
-            # Extract text content
-            text = soup.get_text()
-            
-            # Find all email patterns
-            found_emails = EnhancedEmailExtractor.EMAIL_PATTERN.findall(text)
-            
-            for email in found_emails:
-                email_lower = email.lower()
-                
-                # Filter out common non-business domains
-                domain_part = email_lower.split('@')[1]
-                if domain_part in EnhancedEmailExtractor.EXCLUDE_DOMAINS:
-                    continue
-                
-                # Filter out common no-reply emails
-                if 'noreply' in email_lower or 'no-reply' in email_lower:
-                    continue
-                
-                emails.add(email_lower)
-            
-            # Also check common contact attributes and elements
-            emails.update(EnhancedEmailExtractor._extract_from_attributes(soup))
-            
-            return list(emails)
-            
-        except Exception as e:
-            logger.error(f"Error extracting emails: {e}")
-            return []
-    
-    @staticmethod
-    def _extract_from_attributes(soup: BeautifulSoup) -> Set[str]:
-        """Extract emails from HTML attributes."""
-        emails = set()
-        
-        try:
-            # Check mailto links
+            # 1. Extract from mailto links (high priority - explicit contact)
             for link in soup.find_all('a', href=True):
                 href = link.get('href', '').lower()
                 if href.startswith('mailto:'):
                     email = href.replace('mailto:', '').split('?')[0].strip()
-                    if '@' in email and '.' in email:
-                        emails.add(email)
+                    if UpgradedEmailExtractor._is_valid_email(email):
+                        context_score = UpgradedEmailExtractor._get_element_context_score(link)
+                        UpgradedEmailExtractor._add_email(
+                            emails_dict, email, 'mailto-link', context_score + 30
+                        )
             
-            # Check data attributes
+            # 2. Extract from data attributes
             for element in soup.find_all(True):
                 for attr in ['data-email', 'data-contact', 'data-mail']:
                     if element.has_attr(attr):
-                        value = element.get(attr, '')
-                        if '@' in value and '.' in value:
-                            emails.add(value.lower())
+                        email = element.get(attr, '').strip().lower()
+                        if UpgradedEmailExtractor._is_valid_email(email):
+                            context_score = UpgradedEmailExtractor._get_element_context_score(element)
+                            UpgradedEmailExtractor._add_email(
+                                emails_dict, email, f'data-{attr}', context_score + 20
+                            )
+            
+            # 3. Extract from page text
+            text = soup.get_text()
+            for email_match in UpgradedEmailExtractor.EMAIL_PATTERN.finditer(text):
+                email = email_match.group().lower()
+                if UpgradedEmailExtractor._is_valid_email(email):
+                    # Find the element containing this text
+                    for element in soup.find_all(string=re.compile(re.escape(email))):
+                        context_score = UpgradedEmailExtractor._get_element_context_score(element.parent)
+                        UpgradedEmailExtractor._add_email(
+                            emails_dict, email, 'text-content', context_score
+                        )
+                        break
+            
+            # 4. Score each email
+            results = []
+            for email, data in emails_dict.items():
+                total_score = UpgradedEmailExtractor._calculate_email_score(
+                    email, data, company_domain
+                )
+                results.append({
+                    'email': email,
+                    'score': total_score,
+                    'context_score': data['context_score'],
+                    'sources': data['sources']
+                })
+            
+            # Sort by score
+            results.sort(key=lambda x: x['score'], reverse=True)
+            return results
             
         except Exception as e:
-            logger.debug(f"Error extracting from attributes: {e}")
-        
-        return emails
-    
+            logger.error(f"Error extracting emails: {e}")
+            return []
+
     @staticmethod
-    def get_best_email(emails: List[str]) -> Optional[str]:
+    def _is_valid_email(email: str) -> bool:
+        """Check if email is valid format and not excluded."""
+        if not email or '@' not in email or '.' not in email:
+            return False
+        
+        try:
+            domain = email.split('@')[1].lower()
+            
+            # Exclude personal domains
+            if domain in UpgradedEmailExtractor.EXCLUDE_DOMAINS:
+                return False
+            
+            # Exclude strict reject patterns
+            for pattern in UpgradedEmailExtractor.REJECT_PATTERNS:
+                if pattern in email.lower():
+                    return False
+            
+            return True
+        except Exception:
+            return False
+
+    @staticmethod
+    def _add_email(emails_dict: Dict, email: str, source: str, context_score: int = 0):
+        """Add email to tracking dict, updating scores."""
+        if email not in emails_dict:
+            emails_dict[email] = {
+                'sources': [],
+                'context_score': context_score
+            }
+        
+        emails_dict[email]['sources'].append(source)
+        # Use highest context score found
+        emails_dict[email]['context_score'] = max(
+            emails_dict[email]['context_score'], 
+            context_score
+        )
+
+    @staticmethod
+    def _calculate_email_score(email: str, data: Dict, company_domain: Optional[str] = None) -> int:
+        """Calculate comprehensive score for an email."""
+        score = data['context_score']  # Start with context score
+        local_part = email.split('@')[0].lower()
+        domain_part = email.split('@')[1].lower()
+        
+        # Priority keyword matching (both languages)
+        all_keywords = (
+            UpgradedEmailExtractor.PRIORITY_KEYWORDS.get('en', []) +
+            UpgradedEmailExtractor.PRIORITY_KEYWORDS.get('ja', [])
+        )
+        for keyword in all_keywords:
+            if keyword in local_part:
+                score += 20
+                break
+        
+        # Company domain detection (strong signal)
+        if company_domain and company_domain in domain_part:
+            score += 25
+        
+        # Shorter local parts preferred (more professional)
+        if len(local_part) < 12:
+            score += 10
+        elif len(local_part) < 20:
+            score += 5
+        
+        # Professional domain structure (has dash, multiple parts)
+        if '-' in domain_part:
+            score += 8
+        
+        # Multiple sources increase confidence
+        if len(data['sources']) > 1:
+            score += 10
+        
+        # Penalize very long/auto-generated looking addresses
+        if len(local_part) > 30:
+            score -= 5
+        
+        # Penalize generic catch-alls
+        if local_part in ['admin', 'owner', 'webmaster', 'postmaster', 'mail']:
+            score -= 10
+        
+        return score
+
+    @staticmethod
+    def get_best_email(results: List[Dict]) -> Optional[str]:
         """
-        Get the best email from list based on priority keywords.
+        Get the single best email from extraction results.
         
         Args:
-            emails: List of emails to score
+            results: List of dicts from extract_emails()
             
         Returns:
-            Best email or None if list empty
+            Best email string or None
         """
-        if not emails:
+        if not results:
             return None
         
-        if len(emails) == 1:
-            return emails[0]
-        
-        # Score emails based on priority keywords
-        scored = []
-        for email in emails:
-            score = 0
-            local_part = email.split('@')[0].lower()
-            
-            # Check for priority keywords in local part
-            for keyword in EnhancedEmailExtractor.PRIORITY_KEYWORDS:
-                if keyword in local_part:
-                    score += 10
-            
-            # Prefer shorter local parts (usually more professional)
-            if len(local_part) < 10:
-                score += 5
-            
-            # Prefer domain matching patterns
-            if len(local_part) <= 20:
-                score += 3
-            
-            scored.append((email, score))
+        if len(results) == 1:
+            return results[0]['email']
         
         # Return highest scored email
-        scored.sort(key=lambda x: x[1], reverse=True)
-        return scored[0][0]
+        return results[0]['email']
+
+    @staticmethod
+    def extract_all_emails(html_content: str, page_url: str = None) -> List[str]:
+        """
+        Simple wrapper to get all unique emails as strings.
+        
+        Args:
+            html_content: HTML content to parse
+            page_url: The page URL (optional)
+            
+        Returns:
+            List of unique email addresses
+        """
+        results = UpgradedEmailExtractor.extract_emails(html_content, page_url)
+        return [r['email'] for r in results]
+
+    @staticmethod
+    def get_contact_email(html_content: str, page_url: str = None) -> Optional[str]:
+        """
+        Convenience method to get the single best contact email.
+        
+        Args:
+            html_content: HTML content to parse
+            page_url: The page URL (optional)
+            
+        Returns:
+            Best email string or None
+        """
+        results = UpgradedEmailExtractor.extract_emails(html_content, page_url)
+        return UpgradedEmailExtractor.get_best_email(results)
+
+
+# Compatibility alias for older imports expecting this class name
+# Some modules import `EnhancedEmailExtractor`; provide an alias
+EnhancedEmailExtractor = UpgradedEmailExtractor

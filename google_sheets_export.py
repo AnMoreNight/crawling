@@ -20,7 +20,7 @@ class GoogleSheetsExporter:
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     
     # Your Google Sheet ID (extracted from the shared link)
-    SHEET_ID = '1-CTG-z5o9XhLbGy-3SZr5bUF9X0rekKLV0Zw-7DX8xI' 
+    SHEET_ID = '1bVmWxPLr3omF5QTROOFsJIFkWRruCxMnlksGpfTi6rE' 
     
     def __init__(self, credentials_file='credentials.json'):
         """

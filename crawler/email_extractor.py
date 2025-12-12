@@ -101,7 +101,7 @@ class EmailExtractor:
         self._browser = None
         self._playwright = None
     
-    def extract(self, html_content: str, final_url: Optional[str] = None) -> Dict:
+    def extract(self, html_content: str, final_url: Optional[str] = None, log_candidates: Optional[list] = None) -> Dict:
         """
         Extract emails with all detection methods.
         
@@ -114,10 +114,8 @@ class EmailExtractor:
         """
         url = final_url or self.base_url
         candidates: List[EmailCandidate] = []
-        
         # Check if page likely uses JS for email (heuristic)
         needs_js_rendering = self._needs_js_rendering(html_content)
-        
         # If no candidates found and page likely uses JS, render with Playwright
         if needs_js_rendering and self.use_playwright:
             try:
@@ -127,7 +125,6 @@ class EmailExtractor:
                     logger.info(f"Rendered page with Playwright for {url}")
             except Exception as e:
                 logger.warning(f"Failed to render with Playwright: {e}")
-        
         # Run detectors in order
         candidates.extend(self._detect_mailto_links(html_content, url))
         candidates.extend(self._detect_plain_emails(html_content, url))
@@ -135,24 +132,24 @@ class EmailExtractor:
         candidates.extend(self._detect_jsonld_schema(html_content, url))
         candidates.extend(self._detect_form_placeholders(html_content, url))
         candidates.extend(self._detect_js_assembly(html_content, url))
-        
+        # Fallback: if no candidates, try all <a> and visible text again
+        if not candidates:
+            candidates.extend(self._detect_mailto_links(html_content, url))
+            candidates.extend(self._detect_plain_emails(html_content, url))
         # Normalize all candidates
         normalized_candidates = []
         seen_emails = set()
-        
         for candidate in candidates:
             normalized = self._normalize_email(candidate.email)
             if normalized and normalized not in seen_emails:
                 seen_emails.add(normalized)
                 candidate.email = normalized
                 normalized_candidates.append(candidate)
-        
         # Validate candidates
         validated_candidates = []
         for candidate in normalized_candidates:
             if self._validate_email(candidate.email):
                 validated_candidates.append(candidate)
-        
         # Score candidates
         scored_candidates = []
         for candidate in validated_candidates:
@@ -163,23 +160,22 @@ class EmailExtractor:
                 f"Email candidate: {candidate.email} "
                 f"(method: {candidate.detection_method}, score: {score:.2f})"
             )
-        
         # Sort by score (descending)
         scored_candidates.sort(key=lambda x: x.score, reverse=True)
-        
+        # Log all candidates if requested
+        if log_candidates is not None:
+            log_candidates.extend([c.email for c in scored_candidates])
         # Return top candidate if score >= 0.6
         result = {
             'email': None,
             'confidence': 0.0,
             'candidates': [c.to_dict() for c in scored_candidates]
         }
-        
         if scored_candidates and scored_candidates[0].score >= 0.6:
             top = scored_candidates[0]
             result['email'] = top.email
             result['confidence'] = top.score
             logger.info(f"Selected top email: {top.email} (confidence: {top.score:.2f})")
-        
         return result
     
     def _needs_js_rendering(self, html_content: str) -> bool:

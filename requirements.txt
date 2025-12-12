@@ -1,7 +1,34 @@
+# Core HTTP and HTML Processing
 requests
 beautifulsoup4
 lxml
-urllib3
-playwright
-dnspython
 
+# Data Processing
+pandas
+openpyxl  # Excel support
+
+# Progress Tracking
+tqdm
+
+# Google Sheets Integration
+gspread
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+
+# Configuration
+python-dotenv
+
+# Optional: JavaScript Rendering
+# Uncomment if you need to crawl JS-heavy sites
+# playwright
+
+# Optional: DNS Validation
+# Uncomment if you need MX record validation for emails
+# dnspython
+
+# Optional: Async Support (for future optimization)
+# aiohttp
+# asyncio
+# tenacity

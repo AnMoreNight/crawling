@@ -6,6 +6,8 @@ Sends crawl results to your deployed Google Apps Script
 import requests
 import json
 import logging
+import time
+import random
 from typing import List, Dict, Optional
 from datetime import datetime
 
@@ -148,12 +150,41 @@ def send_crawl_results_to_apps_script(results_file: str, script_url: str):
             for line in f:
                 if line.strip():
                     results.append(json.loads(line))
-        
+
         integrator = GoogleAppsScriptIntegration(script_url)
-        summary = integrator.send_batch(results)
-        
+
+        # Send rows one-by-one with randomized delay between 10 and 20 seconds
+        total = len(results)
+        successful = 0
+        failed = 0
+
+        for idx, row in enumerate(results, start=1):
+            ok = integrator.send_result(row)
+            if ok:
+                successful += 1
+            else:
+                failed += 1
+
+            # Don't sleep after the last row
+            if idx < total:
+                delay = random.uniform(10, 20)
+                logger.info(f"Sleeping {delay:.1f}s before sending next row...")
+                time.sleep(delay)
+
+        summary = {
+            'total': total,
+            'successful': successful,
+            'failed': failed,
+            'timestamp': datetime.now().isoformat()
+        }
+
+        logger.info(f"\nGoogle Apps Script Send Summary:")
+        logger.info(f"  Total: {total}")
+        logger.info(f"  Successful: {successful}")
+        logger.info(f"  Failed: {failed}")
+
         return summary
-        
+
     except Exception as e:
         logger.error(f"Failed to send results: {e}")
         return None

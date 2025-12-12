@@ -50,6 +50,12 @@ class CrawlResult:
         self.last_crawled_at = datetime.utcnow()
         self.crawl_status = crawl_status
         self.error_message = error_message
+
+        # Candidate lists for debugging/analysis
+        self.email_candidates = []
+        self.inquiry_form_candidates = []
+        self.company_name_candidates = []
+        self.industry_candidates = []
     
     def to_dict(self) -> Dict[str, Any]:
         """
@@ -64,11 +70,28 @@ class CrawlResult:
             'inquiryFormUrl': self.inquiry_form_url,
             'companyName': self.company_name,
             'industry': self.industry,
+            'emailCandidates': self.email_candidates,
+            'inquiryFormCandidates': self.inquiry_form_candidates,
+            'companyNameCandidates': self.company_name_candidates,
+            'industryCandidates': self.industry_candidates,
             'httpStatus': self.http_status,
             'robotsAllowed': self.robots_allowed,
             'lastCrawledAt': self.last_crawled_at.isoformat(),
             'crawlStatus': self.crawl_status,
-            'errorMessage': self.error_message
+            'errorMessage': self.error_message,
+            # snake_case aliases for compatibility with test harness
+            'inquiry_form_url': self.inquiry_form_url,
+            'company_name': self.company_name,
+            'industry': self.industry,
+            'email_candidates': self.email_candidates,
+            'inquiry_form_candidates': self.inquiry_form_candidates,
+            'company_name_candidates': self.company_name_candidates,
+            'industry_candidates': self.industry_candidates,
+            'http_status': self.http_status,
+            'robots_allowed': self.robots_allowed,
+            'last_crawled_at': self.last_crawled_at.isoformat(),
+            'crawl_status': self.crawl_status,
+            'error_message': self.error_message
         }
     
     def to_json(self) -> str:

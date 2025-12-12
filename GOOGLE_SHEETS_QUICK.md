@@ -1,7 +1,7 @@
 # Google Sheets Integration - Quick Start
 
 ## Your Google Sheet
-📊 **https://docs.google.com/spreadsheets/d/1-CTG-z5o9XhLbGy-3SZr5bUF9X0rekKLV0Zw-7DX8xI/edit?usp=sharing**
+📊 **https://docs.google.com/spreadsheets/d/1bVmWxPLr3omF5QTROOFsJIFkWRruCxMnlksGpfTi6rE/edit?gid=0#gid=0**
 
 ---
 

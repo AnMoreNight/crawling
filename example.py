@@ -1,24 +1,21 @@
 """
-Example usage of the web crawler module.
-
-This demonstrates how to use the CrawlerEngine to crawl a company website
-and extract structured information.
+Usage examples for Phase 1 Crawler
 """
 
 import json
 import logging
-from crawler import CrawlerEngine
-from utils.logger import setup_logger
+from crawler.engine import CrawlerEngine
 
 # Setup logging
-logger = setup_logger(level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def example_basic_crawl():
     """Basic example of crawling a company website."""
     
     # Configuration
-    root_url = "https://www.tantei.or.jp/"  # Replace with actual company URL
+    root_url = "https://www.konanhanbai.jp/"  # Replace with actual company URL
     
     crawl_settings = {
         'timeout': 30         # Request timeout in seconds

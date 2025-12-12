@@ -32,15 +32,15 @@ class HTMLParser:
         'contact us', 'contact-form', 'inquiry-form', 'contactform'
     ]
     
-    def __init__(self, base_url: str):
+    def __init__(self, base_url: str = None):
         """
         Initialize HTML parser.
         
         Args:
-            base_url: Base URL for resolving relative links
+            base_url: Base URL for resolving relative links (optional)
         """
         self.base_url = base_url
-        self.parsed_base = urlparse(base_url)
+        self.parsed_base = urlparse(base_url) if base_url else None
     
     def parse_links(self, html_content: str, exclude_patterns: List[str] = None) -> Set[str]:
         """

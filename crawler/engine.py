@@ -10,10 +10,10 @@ from .fetcher import PageFetcher
 from .parser import HTMLParser
 from .robots import RobotsChecker
 from .storage import CrawlResult
-from .email_extractor import EmailExtractor
-from .company_name_extractor import CompanyNameExtractor
-from .industry_extractor import IndustryExtractor
+from .enhanced_email_extractor import EnhancedEmailExtractor
+from .enhanced_company_name_extractor import EnhancedCompanyNameExtractor
 from .contact_form_detector import ContactFormDetector
+from .industry_extractor import IndustryExtractor
 
 logger = logging.getLogger(__name__)
 
@@ -21,12 +21,13 @@ logger = logging.getLogger(__name__)
 class CrawlerEngine:
     """
     Main crawler engine that orchestrates the crawling process.
+    Crawls only the root URL once per input (no link following).
     """
     
     def __init__(
         self,
         root_url: str,
-        crawl_settings: Dict[str, int],
+        crawl_settings: Dict[str, int] = None,
         user_agent_policy: str = "CrawlerBot/1.0",
         robots_policy: str = "respect",
         exclude_patterns: List[str] = None
@@ -36,12 +37,14 @@ class CrawlerEngine:
         
         Args:
             root_url: Root company URL to crawl (crawled once per input)
-            crawl_settings: Dictionary with timeout
+            crawl_settings: Dictionary with timeout (default: 30s)
             user_agent_policy: User agent string
             robots_policy: "respect" or "ignore"
             exclude_patterns: List of URL patterns to exclude
         """
         self.root_url = root_url
+        if crawl_settings is None:
+            crawl_settings = {'timeout': 30}
         self.timeout = crawl_settings.get('timeout', 30)
         self.user_agent_policy = user_agent_policy
         self.robots_policy = robots_policy
@@ -50,14 +53,16 @@ class CrawlerEngine:
         # Initialize components
         self.fetcher = PageFetcher(
             timeout=self.timeout,
+            max_retries=3,
             user_agent=self.user_agent_policy
         )
         self.robots_checker = RobotsChecker(user_agent=self.user_agent_policy)
+        self.parser = HTMLParser()  # Will set base_url when parsing
         
         logger.info(f"Initialized crawler for {root_url}")
         logger.info(f"Settings: timeout={self.timeout}, robots_policy={self.robots_policy}")
     
-    def crawl(self, output_file: Optional[str] = None) -> Dict[str, any]:
+    def crawl(self, output_file: Optional[str] = None) -> Dict:
         """
         Crawl the root URL once and return result.
         
@@ -100,29 +105,87 @@ class CrawlerEngine:
         # Fetch page
         content, status_code, final_url, error_message = self.fetcher.fetch_page(url)
         
-        # Initialize result
+        # Initialize result with final URL (after redirects)
+        final_url_to_use = final_url or url
         result = CrawlResult(
-            url=final_url or url,
+            url=final_url_to_use,
             http_status=status_code,
             robots_allowed=robots_allowed,
-            crawl_status="error" if error_message else "success",
+            crawl_status="success" if (content and status_code == 200) else "error",
             error_message=error_message
         )
         
         # If fetch failed, return error result
         if not content or status_code != 200:
+            logger.warning(f"Failed to fetch {url}: HTTP {status_code}")
             if output_file:
                 self._write_result(result, output_file)
             return result.to_dict()
         
-        # Parse HTML
-        parser = HTMLParser(final_url or url)
-        
-        # Extract features
-        self._extract_email(result, parser, content)
-        self._extract_inquiry_form(result, parser, content)
-        self._extract_company_name(result, parser, content)
-        self._extract_industry(result, parser, content)
+        # Parse HTML and extract information
+        try:
+            parser = HTMLParser(final_url_to_use)
+            
+            # Capture candidate containers
+            email_candidates = []
+            company_name_candidates = []
+            form_candidates = []
+            industry_candidates = []
+
+            # Extract emails using enhanced extractor (capture all candidates)
+            emails = EnhancedEmailExtractor.extract_emails(content)
+            if emails:
+                email_candidates.extend(emails)
+                best_email = EnhancedEmailExtractor.get_best_email(emails)
+                if best_email:
+                    result.email = best_email
+                    logger.info(f"Found email: {result.email}")
+            result.email_candidates = email_candidates
+            
+            # Detect forms using ContactFormDetector (scored & candidate-aware)
+            contact_detector = ContactFormDetector(fetcher=self.fetcher, robots_checker=self.robots_checker)
+            form_result = contact_detector.detect_contact_form_url(final_url_to_use, reference_url=None, log_candidates=form_candidates)
+            if form_result and form_result.get('form_url'):
+                result.inquiry_form_url = form_result.get('form_url')
+                logger.info(f"Found inquiry form: {result.inquiry_form_url}")
+            # Attach candidates (list of candidate dicts)
+            result.inquiry_form_candidates = form_result.get('candidates', []) if isinstance(form_result, dict) else []
+            # Also keep raw form candidate URLs list
+            result.inquiry_form_raw_candidates = [c.get('url') for c in result.inquiry_form_candidates]
+            # Add any logged form candidate URLs
+            if form_candidates:
+                # extend the stored candidates list with unique URLs
+                for u in form_candidates:
+                    if u not in result.inquiry_form_raw_candidates:
+                        result.inquiry_form_raw_candidates.append(u)
+            
+            # Extract company name using enhanced extractor (capture candidates)
+            company_name = EnhancedCompanyNameExtractor.extract_company_name(content, reference_name=None, log_candidates=company_name_candidates)
+            if company_name:
+                result.company_name = company_name
+                logger.info(f"Found company name: {result.company_name}")
+            result.company_name_candidates = company_name_candidates
+            
+            # Extract industry using IndustryExtractor (multi-source, candidate logging)
+            industry_extractor = IndustryExtractor(final_url_to_use, fetcher=self.fetcher)
+            industry_result = industry_extractor.extract(content, final_url=final_url_to_use, log_candidates=industry_candidates)
+            if industry_result and industry_result.get('industry'):
+                result.industry = industry_result.get('industry')
+                logger.info(f"Found industry: {result.industry}")
+            # attach industry candidate list
+            result.industry_candidates = industry_result.get('industry_candidates', []) if isinstance(industry_result, dict) else []
+            # also log simple candidate strings if extractor provided them
+            if industry_candidates:
+                # merge unique simple strings into industry_candidates field
+                existing_vals = {c.get('value') for c in result.industry_candidates if isinstance(c, dict) and c.get('value')}
+                for val in industry_candidates:
+                    if val not in existing_vals:
+                        result.industry_candidates.append({'value': val, 'source': 'logged', 'confidence': 0.0})
+                
+        except Exception as e:
+            logger.error(f"Error parsing HTML for {url}: {e}")
+            result.error_message = f"Parsing error: {str(e)}"
+            result.crawl_status = "error"
         
         logger.info(f"Crawl completed for {url}")
         
@@ -131,180 +194,6 @@ class CrawlerEngine:
             self._write_result(result, output_file)
         
         return result.to_dict()
-    
-    def _extract_email(self, result: CrawlResult, parser: HTMLParser, content: str):
-        """
-        Extract email address from HTML content using advanced extraction.
-        
-        Args:
-            result: CrawlResult object to update
-            parser: HTMLParser instance
-            content: HTML content to parse
-        """
-        try:
-            extractor = EmailExtractor(
-                base_url=result.url,
-                use_playwright=True,
-                validate_mx=False  # Set to True if MX validation needed
-            )
-            
-            extraction_result = extractor.extract(content, result.url)
-            
-            if extraction_result.get('email'):
-                result.email = extraction_result['email']
-                confidence = extraction_result.get('confidence', 0.0)
-                logger.info(f"Found email: {result.email} (confidence: {confidence:.2f})")
-                
-                # Log all candidates for audit
-                candidates = extraction_result.get('candidates', [])
-                if candidates:
-                    logger.debug(f"Total email candidates found: {len(candidates)}")
-                    for i, candidate in enumerate(candidates[:5], 1):  # Log top 5
-                        logger.debug(
-                            f"Candidate {i}: {candidate.get('email')} "
-                            f"(method: {candidate.get('detection_method')}, "
-                            f"score: {candidate.get('confidence', 0):.2f})"
-                        )
-            
-            extractor.close()
-        except Exception as e:
-            logger.error(f"Error in advanced email extraction: {e}")
-            # Fallback to basic extraction
-            emails = parser.extract_emails(content)
-            if emails:
-                result.email = list(emails)[0]
-                logger.info(f"Found email (fallback): {result.email}")
-    
-    def _extract_inquiry_form(self, result: CrawlResult, parser: HTMLParser, content: str):
-        """
-        Extract inquiry/contact form URL from HTML content using advanced detection.
-        
-        Args:
-            result: CrawlResult object to update
-            parser: HTMLParser instance
-            content: HTML content to parse
-        """
-        try:
-            # Use advanced contact form detector
-            detector = ContactFormDetector(
-                fetcher=self.fetcher,
-                robots_checker=self.robots_checker
-            )
-            
-            detection_result = detector.detect_contact_form_url(result.url)
-            
-            if detection_result.get('form_url'):
-                result.inquiry_form_url = detection_result['form_url']
-                remarks = detection_result.get('remarks', '')
-                logger.info(f"Found contact form URL: {result.inquiry_form_url} ({remarks})")
-                
-                # Log candidates for audit
-                candidates = detection_result.get('candidates', [])
-                if candidates:
-                    logger.debug(f"Total contact form candidates: {len(candidates)}")
-                    for i, candidate in enumerate(candidates[:3], 1):
-                        logger.debug(
-                            f"Candidate {i}: {candidate.get('url')} "
-                            f"(score: {candidate.get('score', 0):.2f}, "
-                            f"has_form: {candidate.get('has_form', False)})"
-                        )
-        except Exception as e:
-            logger.error(f"Error in advanced contact form detection: {e}")
-            # Fallback to basic detection
-            form_urls = parser.detect_forms(content)
-            if form_urls:
-                result.inquiry_form_url = form_urls[0]
-                logger.info(f"Found inquiry form (fallback): {result.inquiry_form_url}")
-    
-    def _extract_company_name(self, result: CrawlResult, parser: HTMLParser, content: str):
-        """
-        Extract company name from HTML content.
-        
-        Args:
-            result: CrawlResult object to update
-            parser: HTMLParser instance
-            content: HTML content to parse
-        """
-        try:
-            # Use advanced company name extractor
-            name_extractor = CompanyNameExtractor(
-                base_url=result.url,
-                fetcher=self.fetcher
-            )
-            
-            name_result = name_extractor.extract(content, result.url)
-            
-            if name_result.get('company_name'):
-                result.company_name = name_result['company_name']
-                confidence = name_result.get('company_name_confidence', 0.0)
-                source = name_result.get('company_name_source', 'unknown')
-                logger.info(
-                    f"Extracted company name: {result.company_name} "
-                    f"(source: {source}, confidence: {confidence:.2f})"
-                )
-                
-                # Log candidates for audit
-                candidates = name_result.get('company_name_candidates', [])
-                if candidates:
-                    logger.debug(f"Total company name candidates: {len(candidates)}")
-                    for i, candidate in enumerate(candidates[:3], 1):
-                        logger.debug(
-                            f"Candidate {i}: {candidate.get('value')} "
-                            f"(source: {candidate.get('source')}, "
-                            f"confidence: {candidate.get('confidence', 0):.2f})"
-                        )
-        except Exception as e:
-            logger.error(f"Error in advanced company name extraction: {e}")
-            # Fallback to basic extraction
-            metadata = parser.extract_metadata(content)
-            result.company_name = metadata.get('companyName')
-            if result.company_name:
-                logger.info(f"Extracted company name (fallback): {result.company_name}")
-    
-    def _extract_industry(self, result: CrawlResult, parser: HTMLParser, content: str):
-        """
-        Extract industry from HTML content.
-        
-        Args:
-            result: CrawlResult object to update
-            parser: HTMLParser instance
-            content: HTML content to parse
-        """
-        try:
-            # Use advanced industry extractor
-            industry_extractor = IndustryExtractor(
-                base_url=result.url,
-                fetcher=self.fetcher
-            )
-            
-            industry_result = industry_extractor.extract(content, result.url)
-            
-            if industry_result.get('industry'):
-                result.industry = industry_result['industry']
-                confidence = industry_result.get('industry_confidence', 0.0)
-                source = industry_result.get('industry_source', 'unknown')
-                logger.info(
-                    f"Extracted industry: {result.industry} "
-                    f"(source: {source}, confidence: {confidence:.2f})"
-                )
-                
-                # Log candidates for audit
-                candidates = industry_result.get('industry_candidates', [])
-                if candidates:
-                    logger.debug(f"Total industry candidates: {len(candidates)}")
-                    for i, candidate in enumerate(candidates[:3], 1):
-                        logger.debug(
-                            f"Candidate {i}: {candidate.get('value')} "
-                            f"(source: {candidate.get('source')}, "
-                            f"confidence: {candidate.get('confidence', 0):.2f})"
-                        )
-        except Exception as e:
-            logger.error(f"Error in advanced industry extraction: {e}")
-            # Fallback to basic extraction
-            metadata = parser.extract_metadata(content)
-            result.industry = metadata.get('industry')
-            if result.industry:
-                logger.info(f"Extracted industry (fallback): {result.industry}")
     
     def _write_result(self, result: CrawlResult, output_file: str):
         """Write result to output file."""

@@ -1,0 +1,360 @@
+URL	Email	Inquiry Form URL	Company Name	Industry	HTTP Status	Robots Allowed	Last Crawled At	Crawl Status	Error Message																
+https://www.konanhanbai.jp/		https://www.konanhanbai.jp/contact/	コナン販売株式会社		200	TRUE	2025-12-10 14:22:16	success																	
+https://www.wedding-b.com/		https://www.wedding-b.com/contactus.html	結婚相談のウエディング・ベル		200	TRUE	2025-12-10 14:22:23	success																	
+https://mcc-muguet.jp/		https://mcc-muguet.jp/contact.html	エムシー・くりえーと		200	TRUE	2025-12-10 14:22:31	success																	
+http://6gatsunomori.com/		https://6gatsunomori.com/	トップページ		200	TRUE	2025-12-10 14:22:36	success																	
+https://www.fairlen.com/			フェアレン宇都宮		200	TRUE	2025-12-10 14:22:40	success																	
+https://globe-corp.jp/		https://globe-corp.jp/contact.html	株式会社globeコーポレーション		200	TRUE	2025-12-10 14:22:47	success																	
+https://lamour-kekkon.com/		https://lamour-kekkon.com/rsvform/	婚活するならラムールしあわせ結婚相談所		200	TRUE	2025-12-10 14:22:51	success																	
+https://cowa.co.jp/		https://cowa.co.jp/inquiry/	ハートステーション幸和		200	TRUE	2025-12-10 14:23:02	success																	
+http://fs-corporation.co.jp/			エフズコーポレーション		200	TRUE	2025-12-10 14:23:06	success																	
+https://kma-h.co.jp/		https://kma-h.co.jp/inquiry/	埼玉県さいたま市の		200	TRUE	2025-12-10 14:23:11	success																	
+http://www.nsjh.co.jp/index.html		http://www.nsjh.co.jp/contact.html	ＴＯＰ		200	TRUE	2025-12-10 14:23:13	success																	
+https://aics-agency.com/		https://aics-agency.com/	埼玉県さいたま市大宮の		200	TRUE	2025-12-10 14:23:20	success																	
+http://partner-k.co.jp/					0	TRUE	2025-12-10 14:23:27	error	Connection error: HTTPConnectionPool(host='partner-k.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='partner-k.co.jp', port=80): Failed to resolve 'partner-k.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://azul-a.co.jp/					0	TRUE	2025-12-10 14:23:33	error	Connection error: HTTPConnectionPool(host='azul-a.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='azul-a.co.jp', port=80): Failed to resolve 'azul-a.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://mizuden.jp/					200	TRUE	2025-12-10 14:23:35	error																	
+https://www.meiko-kikaku.co.jp/index.html					404	TRUE	2025-12-10 14:23:43	error	HTTP 404																
+https://www.bridalsalon-prana.jp					0	FALSE	2025-12-10 14:23:46	error	Robots.txt disallows crawling																
+https://www.worldcomsys.com/					0	TRUE	2025-12-10 14:23:52	error	Connection error: HTTPSConnectionPool(host='www.worldcomsys.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.worldcomsys.com', port=443): Failed to resolve 'www.worldcomsys.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.asante-sana.co.jp/			株式会社アサンテサーナ		200	TRUE	2025-12-10 14:23:54	success																	
+https://www.webclub.co.jp/		https://www.webclub.co.jp/contact	株式会社ウェブ		200	TRUE	2025-12-10 14:24:03	success																	
+https://www.crane-a.co.jp/		https://www.crane-a.co.jp/contact/	株式会社クレイン		200	TRUE	2025-12-10 14:24:11	success																	
+https://club-marriage.jp/		https://club-marriage.jp/contact/	東京都港区の		200	TRUE	2025-12-10 14:24:24	success																	
+https://www.hosokawa-inc.com/					0	TRUE	2025-12-10 14:24:31	error	Connection error: HTTPSConnectionPool(host='www.hosokawa-inc.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.hosokawa-inc.com', port=443): Failed to resolve 'www.hosokawa-inc.com' ([Errno 11001] getaddrinfo failed)"))																
+https://www.s-mariage.com/	matsuoka@s-mariage.com	https://www.s-mariage.com/	セレブ		200	TRUE	2025-12-10 14:24:44	success																	
+https://www.weddingpark.co.jp:443/		https://www.weddingpark.co.jp/contact	株式会社ウエディングパーク		200	TRUE	2025-12-10 14:24:51	success																	
+http://www.tigre-jp.com/					0	FALSE	2025-12-10 14:24:53	error	Robots.txt disallows crawling																
+http://musubi-tj.com/					0	TRUE	2025-12-10 14:25:00	error	Connection error: HTTPConnectionPool(host='musubi-tj.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='musubi-tj.com', port=80): Failed to resolve 'musubi-tj.com' ([Errno 11001] getaddrinfo failed)"))																
+https://ita-net.co.jp/		https://ita-net.co.jp/contact	ITA 株式会社アイティーエー	technology	200	TRUE	2025-12-10 14:25:06	success																	
+https://c-marriage.jp/		https://c-marriage.jp/page-company.html#form	クレッシェンドマリッジ株式会社のホームページをご覧いただき誠にありがと		200	TRUE	2025-12-10 14:25:15	success																	
+https://officesano.co.jp/		https://officesano.co.jp/contact	株式会社オフィスさの		200	TRUE	2025-12-10 14:25:20	success																	
+http://www.konkatu-agency.com/					0	FALSE	2025-12-10 14:25:21	error	Robots.txt disallows crawling																
+https://aisin-net.jp/		https://aisin-net.jp/	大田区の掃除・洗浄		200	TRUE	2025-12-10 14:25:33	success																	
+http://www.blessandcompany.jp					0	TRUE	2025-12-10 14:25:40	error	Connection error: HTTPConnectionPool(host='www.blessandcompany.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.blessandcompany.jp', port=80): Failed to resolve 'www.blessandcompany.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.ds-ag.net/		http://www.ds-ag.net/contents/inquiry/top.html	D's AGENCY ディーズエージェンシー株式会社		200	TRUE	2025-12-10 14:25:42	success																	
+https://www.br-g.jp/		http://www.br-g.jp/inquiry	東京・新宿で結婚相談所をお探しなら「ブライズガーデン」・複数の連盟に加盟することで成婚への近道を実現		200	TRUE	2025-12-10 14:25:50	success																	
+http://ultima-m.com/index.html		http://ultima-m.com/contact.html	電話占い アルティマ		200	TRUE	2025-12-10 14:25:53	success																	
+http://www.refined-inc.com/index.html		http://www.refined-inc.com/contact/index.html	株式会社リファインド		200	TRUE	2025-12-10 14:25:56	success																	
+http://e-assi.com/					0	TRUE	2025-12-10 14:26:03	error	Connection error: HTTPConnectionPool(host='e-assi.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='e-assi.com', port=80): Failed to resolve 'e-assi.com' ([Errno 11001] getaddrinfo failed)"))																
+https://en-konkatsu.com/		https://en-konkatsu.com/contact/	エン婚活エージェント株式会社は、東証プライム上場企業であるエン株式会		200	TRUE	2025-12-10 14:26:09	success																	
+https://privateclub.jp/		https://privateclub.jp/contents/contact/	プレミアムステイタス運営のハイステイタス専門結婚相談所		200	TRUE	2025-12-10 14:26:16	success																	
+http://nomad-marketing.jp/		http://nomad-marketing.jp/#contact	NOMAD MARKETING		200	TRUE	2025-12-10 14:26:20	success																	
+https://yume-tokyo.com/wp/	yume@yumeki.com		夢の実現『東京夢企画』		200	TRUE	2025-12-10 14:26:32	success																	
+http://a-long.jp/					0	TRUE	2025-12-10 14:27:08	error	Connection error: HTTPConnectionPool(host='a-long.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='a-long.jp', port=80): Failed to resolve 'a-long.jp' ([Errno 11002] getaddrinfo failed)"))																
+https://www.nakodo.co.jp/		https://www.nakodo.co.jp/void(0)	結婚相談所・婚活ビジネスの開業なら日本仲人連盟｜NNR		200	TRUE	2025-12-10 14:27:18	success																	
+https://cupid.co.jp/		https://cupid.co.jp/contact/	キューピッドクラブ		200	TRUE	2025-12-10 14:27:36	success																	
+https://daisy-bride.com/index.html					404	TRUE	2025-12-10 14:27:47	error	HTTP 404																
+https://weridge.com/		https://weridge.com/contact/	銀座の結婚相談所 ウェリッジ		200	TRUE	2025-12-10 14:27:53	success																	
+http://mystyle-ms.co.jp/					0	FALSE	2025-12-10 14:27:55	error	Robots.txt disallows crawling																
+https://www.long-river.co.jp/		https://www.long-river.co.jp/	株式会社ロングリバー		200	TRUE	2025-12-10 14:28:02	success																	
+http://www.windandsun.jp/index.html					0	TRUE	2025-12-10 14:28:09	error	Connection error: HTTPConnectionPool(host='www.windandsun.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.windandsun.jp', port=80): Failed to resolve 'www.windandsun.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://renection.jp/			RENECTION		200	TRUE	2025-12-10 14:28:12	success																	
+http://aies-c.com/	info@aies-c.com	http://aies-c.com/contact.html	株式会社アイエス		200	TRUE	2025-12-10 14:28:15	success																	
+https://smile-sys.jimdofree.com/					403	TRUE	2025-12-10 14:28:20	error	HTTP 403																
+http://partir.jp/			婚活成功方程式		200	TRUE	2025-12-10 14:28:24	success																	
+http://southern-bridal.com/index.html					0	TRUE	2025-12-10 14:30:16	error	Request timeout: HTTPConnectionPool(host='southern-bridal.com', port=80): Max retries exceeded with url: /index.html (Caused by ConnectTimeoutError(<HTTPConnection(host='southern-bridal.com', port=80) at 0x1650541e2d0>, 'Connection to southern-bridal.com timed out. (connect timeout=30)'))																
+http://yokohama-katokikaku.co.jp/					0	TRUE	2025-12-10 14:30:22	error	Connection error: HTTPConnectionPool(host='yokohama-katokikaku.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='yokohama-katokikaku.co.jp', port=80): Failed to resolve 'yokohama-katokikaku.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.campanella1.com/					0	TRUE	2025-12-10 14:30:28	error	Connection error: HTTPConnectionPool(host='www.campanella1.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.campanella1.com', port=80): Failed to resolve 'www.campanella1.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.redegg.co.jp/		http://www.redegg.co.jp/contact/	レッドエッグ(Redegg)		200	TRUE	2025-12-10 14:30:33	success																	
+http://natule-mie.com/index.html					0	TRUE	2025-12-10 14:30:39	error	Connection error: HTTPConnectionPool(host='natule-mie.com', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='natule-mie.com', port=80): Failed to resolve 'natule-mie.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.aany.jp/	info@aany.jp	http://www.aany.jp/	ブライダルハウスアニー		200	TRUE	2025-12-10 14:30:47	success																	
+https://white-ring.jp/		https://white-ring.jp/inquiry/input/index.php	滋賀・草津の結婚相談所・滋賀ホワイトリング低価格で婚活		200	TRUE	2025-12-10 14:31:02	success																	
+https://mariesage.com/	contact@mariesage.com	https://mariesage.com/contact/	滋賀で出会える！創業36年の安心・安全な結婚相談所マリエサージュ		200	TRUE	2025-12-10 14:31:10	success																	
+http://www.kagayaki21.co.jp/			【株式会社 ブライダルサービス輝 】 寝屋川市 結		200	TRUE	2025-12-10 14:31:13	success																	
+https://www.scb.jp/		https://www.scb.jp/inquiry/	滋賀県の		200	TRUE	2025-12-10 14:31:22	success																	
+https://www.marvelous-gr.co.jp/index.php	marvelousbridal@galaxy.ocn.ne.jp	https://www.marvelous-gr.co.jp/contact/index.html	マーベラス		200	TRUE	2025-12-10 14:31:29	success																	
+http://www.mbi-bridal.co.jp/?uid=			結婚再婚お見合い相談 ブライダルサロンMBIの恋愛革命 | 株式会社MBI		200	TRUE	2025-12-10 14:31:32	success																	
+http://www.ams-kyoto.jp/	ams@pop02.odn.ne.jp		アムズが運営する通販		200	TRUE	2025-12-10 14:31:35	success																	
+https://www.tms-m.com/		https://www.tms-m.com/service/platform/	株式会社トータルマリアージュサポート（TMSグループ）		200	TRUE	2025-12-10 14:31:45	success																	
+https://brightwedding.jp/		https://brightwedding.jp/contact.html	大阪市・本町の		200	TRUE	2025-12-10 14:31:51	success																	
+https://www.kekkon-em.com/index.html			大阪北摂で婚活なら結婚相談所【イーガーマリッジ】無料体験受付中		200	TRUE	2025-12-10 14:32:00	success																	
+http://www.growth-company.com/index.html	info@gowth-company.com	http://www.growth-company.com/contact	株式会社グロース		200	TRUE	2025-12-10 14:32:03	success																	
+https://selvice-members.co.jp/		https://selvice-members.co.jp/form_inquiry/	冠婚葬祭互助会		200	TRUE	2025-12-10 14:32:12	success																	
+https://www.anatano-konkatsu.com/		https://www.anatano-konkatsu.com/contact/	堺市の婚活・結婚相談所「あなたの婚活ドットコム」鳳相談所		200	TRUE	2025-12-10 14:32:19	success																	
+http://www.genefuture.co.jp/index.html					0	TRUE	2025-12-10 14:32:25	error	Connection error: HTTPConnectionPool(host='www.genefuture.co.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.genefuture.co.jp', port=80): Failed to resolve 'www.genefuture.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://awake-to.com/		https://business.form-mailer.jp/lp/32d7b03d314197	東京・新宿の		200	TRUE	2025-12-10 14:32:35	success																	
+https://www.kansaibridal.com/		https://www.kansaibridal.com/お問い合わせ/	大阪の結婚相談所・お見合い婚活は関西ブライダル本店		200	TRUE	2025-12-10 14:32:40	success																	
+https://www.kekkon-moriguchi.com/		https://www.kekkon-moriguchi.com/contact/index.php	大阪の		200	TRUE	2025-12-10 14:32:47	success																	
+https://konreicenter.com/		https://konreicenter.com/contact/	株式会社婚礼センター		200	TRUE	2025-12-10 14:32:56	success																	
+https://ilsole-bridal.com/sp/					404	TRUE	2025-12-10 14:33:01	error	HTTP 404																
+https://www.abatjour-ashiya.com/SEO/			お見合い・		200	TRUE	2025-12-10 14:33:13	success																	
+http://www.jmc.sakura.ne.jp/					0	TRUE	2025-12-10 14:33:20	error	Connection error: HTTPConnectionPool(host='www.jmc.sakura.ne.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.jmc.sakura.ne.jp', port=80): Failed to resolve 'www.jmc.sakura.ne.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.passion-bridal.com/		https://www.passion-bridal.com/schedule_form/detail/detail-4783.html	地元で真面目な出会い応援 ふるさと婚活ならパッション婚活パーティ		200	TRUE	2025-12-10 14:33:29	success																	
+https://www.dreams-support.com/sp/index.html		https://www.dreams-support.com/sp/information/contact.html	大阪、和歌山、奈良で婚活するならドリームサポートAyaへ		200	TRUE	2025-12-10 14:33:36	success																	
+http://www.jbpcom.com/					403	TRUE	2025-12-10 14:33:40	error	HTTP 403																
+https://jubre.jp/		https://jubre.jp/contact/	結婚相談所ジュブレ福岡本店｜30代女性に選ばれて18周年		200	TRUE	2025-12-10 14:33:46	success																	
+http://lifepro.me/index.html					200	TRUE	2025-12-10 14:33:50	success																	
+http://n-sympathy.sakura.ne.jp/homepage/			シンパシー		200	TRUE	2025-12-10 14:33:53	success																	
+https://atbell.net/	info@atbell.net	https://atbell.net/contact/	宮崎県にある		200	TRUE	2025-12-10 14:34:01	success																	
+https://roppongi-bridal.jp/		https://roppongi-bridal.jp	ブライダルハウス六本木		200	TRUE	2025-12-10 14:34:06	success																	
+http://ever-onward.net/					0	TRUE	2025-12-10 14:34:12	error	Connection error: HTTPConnectionPool(host='ever-onward.net', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='ever-onward.net', port=80): Failed to resolve 'ever-onward.net' ([Errno 11001] getaddrinfo failed)"))																
+https://ai-wedding.okinawa					0	TRUE	2025-12-10 14:34:19	error	Connection error: HTTPSConnectionPool(host='ai-wedding.okinawa', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='ai-wedding.okinawa', port=443): Failed to resolve 'ai-wedding.okinawa' ([Errno 11001] getaddrinfo failed)"))																
+https://www.tunagarute.com/			株式会社つながる手		200	TRUE	2025-12-10 14:34:31	success																	
+https://kazemichi.co.jp/		https://kazemichi.co.jp/	岡山の		200	TRUE	2025-12-10 14:34:36	success																	
+https://parca52.com/					0	TRUE	2025-12-10 14:35:40	error	Connection error: HTTPSConnectionPool(host='parca52.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='parca52.com', port=443): Failed to resolve 'parca52.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.housesc.co.jp/n.v/	email.n.v@housesc.co.jp		トップページ		200	TRUE	2025-12-10 14:35:43	success																	
+http://www.fukuharayuino.co.jp/index.html					0	TRUE	2025-12-10 14:35:49	error	Connection error: HTTPConnectionPool(host='www.fukuharayuino.co.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.fukuharayuino.co.jp', port=80): Failed to resolve 'www.fukuharayuino.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://ryoen.jp/			広島・福山の結婚相談所なら良縁の大進		200	TRUE	2025-12-10 14:35:59	success																	
+https://fp-iplanning.com/		https://fp-iplanning.com/contact/	アイプランニング合同会社		200	TRUE	2025-12-10 14:36:07	success																	
+https://www.linkstore.co.jp/		https://www.linkstore.co.jp/party/	四国・中国・関西のお見合い・婚活パーティー・街コンならリンクストア		200	TRUE	2025-12-10 14:36:13	success																	
+https://www.e-voce.jp/	voce@e-voce.jp	https://www.e-voce.jp/contact/	VOCE ヴォーチェ〈新しいカタチの恋愛結婚相談所〉愛媛 松山 婚活情報 VOCE ヴォーチェ〈新しいカタチの恋愛結婚相談所〉愛媛 松山 婚活情報		200	TRUE	2025-12-10 14:36:22	success																	
+https://www.bigapples.jp/		https://www.bigapples.jp/contact.html	ビッグアップル(BIGAPPLE)		200	TRUE	2025-12-10 14:36:28	success																	
+http://h-heart.jp/index.html					0	FALSE	2025-12-10 14:36:29	error	Robots.txt disallows crawling																
+https://www.n-pla.com/		https://www.n-pla.com/contact/	株式会社ネオプランニング（札幌市中央区）		200	TRUE	2025-12-10 14:36:35	success																	
+https://mariene.co.jp/		https://mariene.co.jp/contact/			200	TRUE	2025-12-10 14:36:48	success																	
+https://sunncreate.co.jp/			サンクリエイト・札幌		200	TRUE	2025-12-10 14:36:56	success																	
+https://enmusubienji.net/	info@enmusubienji.net	https://enmusubienji.net/contact	縁結びえんじ		200	TRUE	2025-12-10 14:37:02	success																	
+https://s-moment.net/		https://s-moment.net/contact/	岩手県・宮城県の		200	TRUE	2025-12-10 14:37:08	success																	
+http://www.ibuki818.jp/		http://www.ibuki818.jp/contact	宮城仙台の		200	TRUE	2025-12-10 14:37:13	success																	
+http://marriagesupport.net/72370/					0	TRUE	2025-12-10 14:37:19	error	Connection error: HTTPConnectionPool(host='marriagesupport.net', port=80): Max retries exceeded with url: /72370/ (Caused by NameResolutionError("HTTPConnection(host='marriagesupport.net', port=80): Failed to resolve 'marriagesupport.net' ([Errno 11001] getaddrinfo failed)"))																
+https://sol-terre.co.jp/			仙台・山形のウェディングドレス総合貸衣裳『ソルテール』		200	TRUE	2025-12-10 14:40:22	success																	
+https://www.palace-iwaya.jp/					200	TRUE	2025-12-10 14:40:30	success																	
+http://www.forever-aoba.co.jp/		http://www.forever-aoba.co.jp/contact	福島県(福島･郡山)の結婚相談所･婚活･お見合いパーティならフォーエバーアオバ企画		200	TRUE	2025-12-10 14:40:33	success																	
+https://www.fixdiamond.co.jp/	info@fixdiamond.co.jp	https://www.fixdiamond.co.jp/login/inquiryedit	パワーストーン販売、		200	TRUE	2025-12-10 14:40:39	success																	
+https://www.wedding-march.co.jp/		https://www.wedding-march.co.jp/contact.html	新潟市の		200	TRUE	2025-12-10 14:40:43	success																	
+http://thyme-call.jp/index.html					404	TRUE	2025-12-10 14:40:47	error	HTTP 404																
+http://www.nakodokobo.jp/		https://www.nakodokobo.jp/	【2023年最新版】今人気でおすすめの結婚相談所を徹底解説！		200	TRUE	2025-12-10 14:40:51	success																	
+https://www.belaks.com/		https://www.belaks.com/contact/	長野県飯田市の結婚式場 ビーラクスマツカワ		200	TRUE	2025-12-10 14:41:10	success																	
+http://yell50.com/index.htm			ご結婚を望む方々へ・・株式会社エール		200	TRUE	2025-12-10 14:41:13	success																	
+http://www.gifu-gojokai.co.jp/					0	TRUE	2025-12-10 14:41:20	error	Connection error: HTTPConnectionPool(host='www.gifu-gojokai.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.gifu-gojokai.co.jp', port=80): Failed to resolve 'www.gifu-gojokai.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://g-daimaru.com					0	FALSE	2025-12-10 14:41:25	error	Robots.txt disallows crawling																
+http://www.hpchpc.com/index.php		http://www.hpchpc.com/contact.php	HPC		200	TRUE	2025-12-10 14:41:27	success																	
+http://good-chance.co.jp/					0	TRUE	2025-12-10 14:41:34	error	Connection error: HTTPConnectionPool(host='good-chance.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='good-chance.co.jp', port=80): Failed to resolve 'good-chance.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.futurestaff.jp/		https://www.futurestaff.jp/contact/	静岡県・愛知県・浜松市・磐田市・掛川市の工場関係のお仕事探しはザ・フューチャスタッフ		200	TRUE	2025-12-10 14:41:42	success																	
+https://miho.tv/		https://miho.tv/contact/	美穂プロモーション株式会社		200	TRUE	2025-12-10 14:41:55	success																	
+http://www.meguriai-do.com/					0	TRUE	2025-12-10 14:42:07	error	Connection error: HTTPConnectionPool(host='www.meguriai-do.com', port=80): Max retries exceeded with url: / (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))																
+http://keiai-bridal.com/					0	TRUE	2025-12-10 14:42:13	error	Connection error: HTTPConnectionPool(host='keiai-bridal.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='keiai-bridal.com', port=80): Failed to resolve 'keiai-bridal.com' ([Errno 11001] getaddrinfo failed)"))																
+https://iae.co.jp/		https://iae.co.jp/contact/	静岡県の人材派遣なら株式会社アイエーイー		200	TRUE	2025-12-10 14:42:25	success																	
+https://es-es.co.jp/		https://es-es.co.jp/contact/	エスグループ		200	TRUE	2025-12-10 14:42:34	success																	
+http://www.salon-suzuran.com/			結婚相談　静岡県｜結婚相談所すずらん		200	TRUE	2025-12-10 14:42:36	success																	
+http://www.mydosky.co.jp/		http://www.mydosky.co.jp/contact.html	マイド商会 株式会社		200	TRUE	2025-12-10 14:42:39	success																	
+https://www.lext.co.jp/			【公式】株式会社レクスト｜グランドティアラ・愛昇殿グルー		200	TRUE	2025-12-10 14:42:47	success																	
+https://www.bridal-vip.co.jp/		https://www.bridal-vip.co.jp/inquiry/visit/	株式会社ブライダル		200	TRUE	2025-12-10 14:42:55	success																	
+https://sales-training.nagoya/		https://sales-training.nagoya/contact	名古屋･愛知で起業セミナー開催「知らないと損する起業セミナー」		200	TRUE	2025-12-10 14:43:03	success																	
+http://fudosannagoya.com/					0	TRUE	2025-12-10 14:43:19	error	Connection error: HTTPSConnectionPool(host='fudosannagoya.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1006)')))																
+http://www.nozze.com/access/list/20.php	nagoya@nozze.com		名古屋でお見合いなら		200	TRUE	2025-12-10 14:43:23	success																	
+https://www.more.jp.net/			婚活、スキンケア、お掃除 | More		200	TRUE	2025-12-10 14:43:26	success																	
+http://www.best-i.co.jp/sp/					0	TRUE	2025-12-10 14:43:32	error	Connection error: HTTPConnectionPool(host='www.best-i.co.jp', port=80): Max retries exceeded with url: /sp/ (Caused by NameResolutionError("HTTPConnection(host='www.best-i.co.jp', port=80): Failed to resolve 'www.best-i.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://nagoyakonkatsu.jp/					0	FALSE	2025-12-10 14:43:33	error	Robots.txt disallows crawling																
+http://www.patorich.co.jp/		http://www.patorich.co.jp/contact/	結婚相談所・婚活パーティPatorichで、素敵な出会いを｜株式会社パトリッチ		200	TRUE	2025-12-10 14:43:37	success																	
+https://www.crecious.com/company.html					404	TRUE	2025-12-10 14:43:44	error	HTTP 404																
+https://www.attender.jp/		https://www.attender.jp/inquiry/	名古屋の結婚相談所【婚活サポート アテンダー】驚異の成婚数！		200	TRUE	2025-12-10 14:43:50	success																	
+https://www.makiyasu.com/		https://coporo-net.com/coporo-catalog/contact	衣裳レンタル	technology	200	TRUE	2025-12-10 14:44:28	success																	
+http://www.mariage-mito.jp/index.html		http://www.mariage-mito.jp/contents/inquiry.html	マリアージュ		200	TRUE	2025-12-10 14:44:32	success																	
+https://www.sansuien-mr.co.jp/		https://www.sansuien-mr.co.jp/contact/	(株)山水苑		200	TRUE	2025-12-10 14:44:41	success																	
+http://dreamagent.info/index.html					200	TRUE	2025-12-10 14:45:12	success																	
+http://www.tonakuma.com/					0	TRUE	2025-12-10 14:45:41	error	Connection error: HTTPSConnectionPool(host='tonakuma.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPSConnection(host='tonakuma.com', port=443): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))																
+https://dhipithi.com/		https://docs.google.com/forms/d/e/1FAIpQLSe87PzHv3cYJKDlUyRdHTT0chCPrW41qyrCfOdxJzEm4hBnBA/viewform?usp=sharing			200	TRUE	2025-12-10 14:45:51	success																	
+http://cafe-ciel.jp					0	TRUE	2025-12-10 14:45:58	error	Connection error: HTTPConnectionPool(host='cafe-ciel.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='cafe-ciel.jp', port=80): Failed to resolve 'cafe-ciel.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.jma-takasaki.com/index.php		https://www.jma-takasaki.com/information.php	jma高崎		200	TRUE	2025-12-10 14:46:09	success																	
+http://www.bic-excellent.jp/index.html					0	TRUE	2025-12-10 14:46:15	error	Connection error: HTTPConnectionPool(host='www.bic-excellent.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.bic-excellent.jp', port=80): Failed to resolve 'www.bic-excellent.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.foryouweb.co.jp/index.html		http://www.foryouweb.co.jp/contact/contact.html	Foryou		200	TRUE	2025-12-10 14:46:24	success																	
+http://www.kmr-company.com/index.html			company		200	TRUE	2025-12-10 14:46:29	success																	
+https://www.bellnokai.com/		https://www.bellnokai.com/contact/#02	【出逢い＆縁結び】埼玉ベルの会		200	TRUE	2025-12-10 14:46:39	success																	
+https://www.saikika.com/index.html					404	TRUE	2025-12-10 14:46:49	error	HTTP 404																
+https://www.fine-konpo.com/					0	FALSE	2025-12-10 14:46:56	error	Robots.txt disallows crawling																
+http://www.happyvillage.co.jp/					0	TRUE	2025-12-10 14:47:03	error	Connection error: HTTPConnectionPool(host='www.happyvillage.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.happyvillage.co.jp', port=80): Failed to resolve 'www.happyvillage.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.august-ltd.jp/		https://www.august-ltd.jp/#contact	リオン保育園		200	TRUE	2025-12-10 14:47:15	success																	
+https://www.saikon.jp/info.jsp	info@saikon.jp		会社概要		200	TRUE	2025-12-10 14:47:19	success																	
+http://palmbridal.net/					0	FALSE	2025-12-10 14:47:20	error	Robots.txt disallows crawling																
+https://www.mi-kklife.com/			結婚相談所 千葉  船橋 八千代「婚活生活」｜ご成婚続出。		200	TRUE	2025-12-10 14:47:37	success																	
+http://www.a-shiina.co.jp/index.html					0	TRUE	2025-12-10 14:47:44	error	Connection error: HTTPConnectionPool(host='www.a-shiina.co.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.a-shiina.co.jp', port=80): Failed to resolve 'www.a-shiina.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.nc-ser.com/					0	TRUE	2025-12-10 14:47:50	error	Connection error: HTTPConnectionPool(host='www.nc-ser.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.nc-ser.com', port=80): Failed to resolve 'www.nc-ser.com' ([Errno 11001] getaddrinfo failed)"))																
+https://www.club-sincerite.co.jp/			東京・表参道		200	TRUE	2025-12-10 14:47:56	success																	
+http://www.platinum-celebrity.co.jp/			東京都港区のハイクラス特化の		200	TRUE	2025-12-10 14:48:00	success																	
+https://1ns3q0w.uk.com/		https://1ns3q0w.uk.com/	Fi88 1ns3q0w © Cá Cược 5 Sao Tại Fi88.com +888K		200	TRUE	2025-12-10 14:48:05	success																	
+https://www.excellence-aoyama.jp/			東京・青山のハイスペック・セレブ結婚相談所エクセレンス青山		200	TRUE	2025-12-10 14:48:10	success																	
+https://www.liaison-pure.net/tokutei			特定商取引法の表示		200	TRUE	2025-12-10 14:48:18	success																	
+https://www.aube-1122.co.jp/		https://www.aube-1122.co.jp/contact.html	結婚相談所オーブ｜東京杉並区と福島市で婚活のプロが全力で支援		200	TRUE	2025-12-10 14:48:26	success																	
+http://www.lala-golf.com/			みんなで楽しく参加できるカジュアルゴルコン！		200	TRUE	2025-12-10 14:48:30	success																	
+https://spread-i.com/			会社情報		200	TRUE	2025-12-10 14:48:51	success																	
+http://petero.jp/			ペテロの涙　クリスチャン専門の		200	TRUE	2025-12-10 14:48:57	success																	
+http://www.nkcad.co.jp/					200	TRUE	2025-12-10 14:48:58	success																	
+http://www.ibelieve-ig.com/					0	TRUE	2025-12-10 14:49:05	error	Connection error: HTTPConnectionPool(host='www.ibelieve-ig.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.ibelieve-ig.com', port=80): Failed to resolve 'www.ibelieve-ig.com' ([Errno 11001] getaddrinfo failed)"))																
+https://omiaipro.com/	omiaipro1@gmail.com		ラ・セレヴィーナ		200	TRUE	2025-12-10 14:49:16	success																	
+https://marzcafe.com/	support@marzcafe.com		東京の		200	TRUE	2025-12-10 14:49:26	success																	
+https://www.matrimonio-aoyama.com/		https://www.matrimonio-aoyama.com/contact/	東京のお見合い・結婚相談所なら駒込のマトリモーニオ青山		200	TRUE	2025-12-10 14:49:31	success																	
+https://www.growing-trees.com/happytree/					0	TRUE	2025-12-10 14:49:45	error	Connection error: HTTPSConnectionPool(host='www.growing-trees.com', port=443): Max retries exceeded with url: /happytree/ (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.growing-trees.com'. (_ssl.c:1006)")))																
+http://p-marriage.mouth-field.com					0	TRUE	2025-12-10 14:49:52	error	Connection error: HTTPConnectionPool(host='p-marriage.mouth-field.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='p-marriage.mouth-field.com', port=80): Failed to resolve 'p-marriage.mouth-field.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.impreso.co.jp/					404	TRUE	2025-12-10 14:49:54	error	HTTP 404																
+http://espc.jp/					0	TRUE	2025-12-10 14:50:01	error	Connection error: HTTPConnectionPool(host='espc.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='espc.jp', port=80): Failed to resolve 'espc.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://cda.in.net/	info@cda.in.net		株式会社セレブレディア		200	TRUE	2025-12-10 14:50:04	success																	
+http://lcoode.com//					0	TRUE	2025-12-10 14:50:14	error	Connection error: HTTPConnectionPool(host='lcoode.com', port=80): Max retries exceeded with url: // (Caused by ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))																
+http://ttsv.web.fc2.com/index.html			© 株式会社ティティエス		200	TRUE	2025-12-10 14:50:18	success																	
+https://www.kaiketsubank.com/			ゲーミングPCドットコム		200	TRUE	2025-12-10 14:50:26	success																	
+https://kizuna-link.jp/					0	FALSE	2025-12-10 14:50:29	error	Robots.txt disallows crawling																
+http://onet.rakuten.co.jp					0	TRUE	2025-12-10 14:50:35	error	Connection error: HTTPConnectionPool(host='onet.rakuten.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='onet.rakuten.co.jp', port=80): Failed to resolve 'onet.rakuten.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.e-kekkon.org/	info@e-kekkon.org	http://www.e-kekkon.org/contact.html	東京　自由が丘の結婚相談所（全国対応）		200	TRUE	2025-12-10 14:50:38	success																	
+https://minorikai.co.jp/		https://minorikai.co.jp/	世田谷の結婚相談所【仲人型】なら「成婚率50%」みのり会		200	TRUE	2025-12-10 14:50:47	success																	
+https://www.p-a.jp/		https://www.p-a.jp/knowledge/contact/	結婚相談所・婚活ならパートナーエージェント【成婚率No.1】		200	TRUE	2025-12-10 14:50:53	success																	
+https://cleaty.co.jp/	contact@cleaty.co.jp	mailto:contact@cleaty.co.jp	クレアティー・		200	TRUE	2025-12-10 14:51:11	success																	
+http://www.zenchuren.co.jp/					0	TRUE	2025-12-10 14:51:18	error	Connection error: HTTPConnectionPool(host='www.zenchuren.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.zenchuren.co.jp', port=80): Failed to resolve 'www.zenchuren.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.akanekai.co.jp/					200	TRUE	2025-12-10 14:51:27	success																	
+https://www.mariage-age.com/		https://mariage-age.com/	新宿駅近くで定期面談		200	TRUE	2025-12-10 14:51:33	success																	
+https://singlemother-support.co.jp/					0	TRUE	2025-12-10 14:51:39	error	Connection error: HTTPSConnectionPool(host='singlemother-support.co.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='singlemother-support.co.jp', port=443): Failed to resolve 'singlemother-support.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.kekkon-serenade.com					0	TRUE	2025-12-10 14:51:46	error	Connection error: HTTPConnectionPool(host='www.kekkon-serenade.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.kekkon-serenade.com', port=80): Failed to resolve 'www.kekkon-serenade.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.k-tiara.co.jp/			横浜の結婚相談所 ティアラー		200	TRUE	2025-12-10 14:51:48	success																	
+https://duo-bridal.com/		https://duo-bridal.com/contact/	DUO BRIDAL（デュオブライダル）		200	TRUE	2025-12-10 14:51:57	success																	
+https://www.1rankue.com/	info@happycomecom.com	https://www.1rankue.com/form/oubo/	東京 恵比寿・銀座の結婚相談所ハッピーカムカム		200	TRUE	2025-12-10 14:52:02	success																	
+http://www.recruit-zexy-navi.jp/			Recruit Zexy Navi Co., Ltd.		200	TRUE	2025-12-10 14:52:07	success																	
+https://www.seishin.net/index.htm			医師・セレブとの		200	TRUE	2025-12-10 14:52:14	success																	
+http://www.zwei.co.jp/					0	TRUE	2025-12-10 14:54:06	error	Request timeout: HTTPConnectionPool(host='www.zwei.co.jp', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.zwei.co.jp', port=80) at 0x16505495e90>, 'Connection to www.zwei.co.jp timed out. (connect timeout=30)'))																
+https://www.sunmarie.co.jp/news/2023_11_30/		https://www.sunmarie.co.jp/contact/	「プライムマリッジ株式会社」事業譲受に関するお知らせ		200	TRUE	2025-12-10 14:54:10	success																	
+http://www.royal-excellence.co.jp/			ロイヤルエクセレンス銀座		200	TRUE	2025-12-10 14:54:12	success																	
+https://www.zelm.co.jp/		https://www.zelm.co.jp/	結婚相談所ブライダルゼルム【東京・銀座】		200	TRUE	2025-12-10 14:54:17	success																	
+http://www.mariru.co.jp/	info@mariru.co.jp		結婚相談所 銀座 mariru		200	TRUE	2025-12-10 14:54:20	success																	
+https://www.alphalife-marriage.co.jp/index.html			婚活のプロフェッショナル｜アルファライフ秋葉原、仙台、山形、千葉、大宮　安心の相談所をお探しの方に		200	TRUE	2025-12-10 14:54:30	success																	
+http://www.jbc-kekkon.co.jp					0	TRUE	2025-12-10 14:54:38	error	Connection error: HTTPConnectionPool(host='www.jbc-kekkon.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.jbc-kekkon.co.jp', port=80): Failed to resolve 'www.jbc-kekkon.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://kjmate.com/		https://kjmate.com/	国際結婚タイのことならKJMにお任せ | 成婚実績500組以上！		200	TRUE	2025-12-10 14:54:53	success																	
+https://withyoubridal.p-kit.com/					403	TRUE	2025-12-10 14:55:02	error	HTTP 403																
+http://magnet-bridal.com/					0	TRUE	2025-12-10 14:55:08	error	Connection error: HTTPConnectionPool(host='magnet-bridal.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='magnet-bridal.com', port=80): Failed to resolve 'magnet-bridal.com' ([Errno 11001] getaddrinfo failed)"))																
+http://la-bonheur.co.jp/#company		https://docs.google.com/forms/d/e/1FAIpQLScPbUtY9MO76OaxUndvsbClqL7h8v5t_T--sA5Cpk2aqoZneQ/viewform	幸せを感じられる社会を目指し、輝く女性を応援する横浜発の女性活躍支援企業		200	TRUE	2025-12-10 14:55:11	success																	
+http://www.kokoroniegao.com/					0	TRUE	2025-12-10 14:55:18	error	Connection error: HTTPConnectionPool(host='www.kokoroniegao.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.kokoroniegao.com', port=80): Failed to resolve 'www.kokoroniegao.com' ([Errno 11001] getaddrinfo failed)"))																
+https://marriageclub-wish.com/			結婚相談所ウィッシュ（東京・横浜）		200	TRUE	2025-12-10 14:55:23	success																	
+http://www.uranainoyakata.jp/index.html					0	TRUE	2025-12-10 14:55:32	error	Connection error: HTTPConnectionPool(host='www.uranainoyakata.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.uranainoyakata.jp', port=80): Failed to resolve 'www.uranainoyakata.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.swans-bridal.com/					0	FALSE	2025-12-10 14:55:34	error	Robots.txt disallows crawling																
+http://mie-research.com/					0	TRUE	2025-12-10 14:55:40	error	Connection error: HTTPConnectionPool(host='mie-research.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='mie-research.com', port=80): Failed to resolve 'mie-research.com' ([Errno 11001] getaddrinfo failed)"))																
+https://www.raim.ne.jp/	raim@raim.ne.jp	https://www.raim.ne.jp/p/search	来夢堂		200	TRUE	2025-12-10 14:55:48	success																	
+http://bridal-shiga.com/		http://bridal-shiga.com/	カフカ ブライダル滋賀		200	TRUE	2025-12-10 14:55:53	success																	
+http://www.ollie-net.com/deai/index.html	kyoto@ollie-net.com		オーリー京都滋賀シニアの		200	TRUE	2025-12-10 14:55:56	success																	
+http://socio-kyoto.jp					0	TRUE	2025-12-10 14:56:02	error	Connection error: HTTPConnectionPool(host='socio-kyoto.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='socio-kyoto.jp', port=80): Failed to resolve 'socio-kyoto.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.marriage-network.net/index.html					0	TRUE	2025-12-10 14:56:09	error	Connection error: HTTPConnectionPool(host='www.marriage-network.net', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.marriage-network.net', port=80): Failed to resolve 'www.marriage-network.net' ([Errno 11001] getaddrinfo failed)"))																
+http://www.bgy.co.jp/		http://www.bgy.co.jp/form.php	大阪・天王寺・阿倍野で地域密着型の結婚相談なら有限会社セブンローズ・ブライダルギャラリー邑（ゆ		200	TRUE	2025-12-10 14:56:13	success																	
+https://www.e-akaneya.com/		https://www.e-akaneya.com/form	１年以内に		200	TRUE	2025-12-10 14:56:16	success																	
+https://www.avenir2.jp/					0	FALSE	2025-12-10 14:56:37	error	Robots.txt disallows crawling																
+http://www.bridal-toyonaka.jp/					0	FALSE	2025-12-10 14:56:39	error	Robots.txt disallows crawling																
+http://universe-site.com/index.html					0	TRUE	2025-12-10 14:56:46	error	Connection error: HTTPConnectionPool(host='universe-site.com', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='universe-site.com', port=80): Failed to resolve 'universe-site.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.saikyokokusai.co.jp/			国際結婚なら彩橋へ　中国をメインでご紹介		200	TRUE	2025-12-10 14:56:49	success																	
+https://worldwedding.jp/		https://worldwedding.jp/contact/	TOPページ		200	TRUE	2025-12-10 14:56:58	success																	
+https://jba-e.com/jba_jr/27013/index.html					404	TRUE	2025-12-10 14:57:07	error	HTTP 404																
+https://bridal-eterna.com/		https://bridal-eterna.com/contact/	結婚相談所なら大阪の婚活をサポートする「エテルナ」		200	TRUE	2025-12-10 14:57:16	success																	
+http://boolnetworks.com/index.html			株式会社ブールネットワークス		200	TRUE	2025-12-10 14:57:21	success																	
+http://integral-japan.com/					404	TRUE	2025-12-10 14:57:24	error	HTTP 404																
+http://leben.jp/					0	FALSE	2025-12-10 14:57:34	error	Robots.txt disallows crawling																
+https://www.m-road.co.jp/			結婚相談所、大阪（事務局）、神戸、京都、関西で婚活するなら100％手作りのお世話の【エムロード】		200	TRUE	2025-12-10 14:57:40	success																	
+https://www.kekkonjoho.net/			大阪・神戸の結婚相談所マリッヂサポート		200	TRUE	2025-12-10 14:57:46	success																	
+https://kekkon-party.com/index.php		https://kekkon-party.com/index.html#form	RM婚活パーティー大阪｜エグゼクティブ（医師）婚活大阪		200	TRUE	2025-12-10 14:57:54	success																	
+https://kekkon-osaka.com/		https://kekkon-osaka.com/party-contact/	HOME		200	TRUE	2025-12-10 14:58:03	success																	
+http://emukon.com/index.html					404	TRUE	2025-12-10 14:58:07	error	HTTP 404																
+https://www.koodivision.co.jp/		https://www.koodivision.co.jp/	ホームページ - 株式会社クーディビジョン		200	TRUE	2025-12-10 14:58:15	success																	
+https://joykobe.jp/		https://joykobe.jp/contact/	トップページ		200	TRUE	2025-12-10 14:58:21	success																	
+http://www.ccr.co.jp/index.html					401	TRUE	2025-12-10 14:58:48	error	HTTP 401																
+http://teqlo.co.jp/					0	TRUE	2025-12-10 14:58:55	error	Connection error: HTTPConnectionPool(host='teqlo.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='teqlo.co.jp', port=80): Failed to resolve 'teqlo.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://oasis2.sakura.ne.jp/bella/index.html					0	TRUE	2025-12-10 14:59:01	error	Connection error: HTTPConnectionPool(host='oasis2.sakura.ne.jp', port=80): Max retries exceeded with url: /bella/index.html (Caused by NameResolutionError("HTTPConnection(host='oasis2.sakura.ne.jp', port=80): Failed to resolve 'oasis2.sakura.ne.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.misuzu-academy.co.jp/					0	TRUE	2025-12-10 14:59:08	error	Connection error: HTTPConnectionPool(host='www.misuzu-academy.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.misuzu-academy.co.jp', port=80): Failed to resolve 'www.misuzu-academy.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://nosrevesbridal.com/					0	TRUE	2025-12-10 14:59:14	error	Connection error: HTTPConnectionPool(host='nosrevesbridal.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='nosrevesbridal.com', port=80): Failed to resolve 'nosrevesbridal.com' ([Errno 11001] getaddrinfo failed)"))																
+http://braconsa.co.jp/					403	TRUE	2025-12-10 14:59:16	error	HTTP 403																
+http://www.ai-zen.com/					200	TRUE	2025-12-10 14:59:20	success																	
+https://www.mms-wakayama.com/		https://www.mms-wakayama.com/contact.html	有限会社エムエムサービス		200	TRUE	2025-12-10 14:59:27	success																	
+http://www.jubre-kurume.com/					0	TRUE	2025-12-10 14:59:33	error	Connection error: HTTPConnectionPool(host='www.jubre-kurume.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.jubre-kurume.com', port=80): Failed to resolve 'www.jubre-kurume.com' ([Errno 11001] getaddrinfo failed)"))																
+http://nrtltd.co.jp/			有限会社エヌアールティー		200	TRUE	2025-12-10 14:59:36	success																	
+https://www.q-marry.com/					0	FALSE	2025-12-10 14:59:38	error	Robots.txt disallows crawling																
+https://www.en-counter.co					0	TRUE	2025-12-10 14:59:59	error	Connection error: HTTPSConnectionPool(host='creative.manna-verse.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='creative.manna-verse.com', port=443): Failed to resolve 'creative.manna-verse.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.global-kyusyu.com/index.php		http://www.global-kyusyu.com/contact.php	九州地方で姓名鑑定を取り入れた開運印のご相談なら株式会社グローバル九州へ		200	TRUE	2025-12-10 15:00:02	success																	
+https://www.p-star.co.jp/			バラード		200	TRUE	2025-12-10 15:00:08	success																	
+http://juunnoheya.com/?fbclid=IwAR20ODe2rGDdjVBlVOyqak5TZCCHSp-DHIItOXJxP63HK7E5Vp4pEm5smGQ					0	FALSE	2025-12-10 15:00:09	error	Robots.txt disallows crawling																
+http://www.cafemaruco.jp					0	TRUE	2025-12-10 15:00:16	error	Connection error: HTTPConnectionPool(host='www.cafemaruco.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.cafemaruco.jp', port=80): Failed to resolve 'www.cafemaruco.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://hotel-valentine.jp/					200	TRUE	2025-12-10 15:00:42	success																	
+http://cheer-s.com/index.html					404	TRUE	2025-12-10 15:00:51	error	HTTP 404																
+https://www.net-f.jp/		https://www.net-f.jp/contact/	Net femme ネットファム株式会社－フランス・パリ ビジネス＆各種デザイン製作－		200	TRUE	2025-12-10 15:01:01	success																	
+http://www.pc-sos.co.jp/			有限会社　エフアールエス		200	TRUE	2025-12-10 15:01:04	success																	
+http://www.liebe-net.jp/					403	TRUE	2025-12-10 15:01:08	error	HTTP 403																
+http://producehiroshima.com/					0	TRUE	2025-12-10 15:01:14	error	Connection error: HTTPConnectionPool(host='producehiroshima.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='producehiroshima.com', port=80): Failed to resolve 'producehiroshima.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.nouvelle-vague.co.jp/					0	FALSE	2025-12-10 15:01:17	error	Robots.txt disallows crawling																
+http://www.bs-vita.com/					0	TRUE	2025-12-10 15:01:24	error	Connection error: HTTPConnectionPool(host='www.bs-vita.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.bs-vita.com', port=80): Failed to resolve 'www.bs-vita.com' ([Errno 11001] getaddrinfo failed)"))																
+http://tomorrowclub.co.jp/	info@tomorrowclub.co.jp	http://tomorrowclub.co.jp/contact.html	TOP		200	TRUE	2025-12-10 15:01:36	success																	
+http://www.joint-bridal.com/service.html					0	TRUE	2025-12-10 15:01:43	error	Connection error: HTTPConnectionPool(host='www.joint-bridal.com', port=80): Max retries exceeded with url: /service.html (Caused by NameResolutionError("HTTPConnection(host='www.joint-bridal.com', port=80): Failed to resolve 'www.joint-bridal.com' ([Errno 11001] getaddrinfo failed)"))																
+http://rakka.xsrv.jp/			山口県下関市で法務・リフォーム・フェイシャルエステ・ブランド、古着販売・を経営している会社です。		200	TRUE	2025-12-10 15:01:48	success																	
+http://www.fujigen.com/index.html	fujigen@fujigen.com	http://www.fujigen.com/contact.html	有限会社ふじげん		200	TRUE	2025-12-10 15:01:51	success																	
+http://www.happytamago.com/					0	TRUE	2025-12-10 15:01:58	error	Connection error: HTTPConnectionPool(host='www.happytamago.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.happytamago.com', port=80): Failed to resolve 'www.happytamago.com' ([Errno 11001] getaddrinfo failed)"))																
+https://www.bridal-believe.co.jp					0	TRUE	2025-12-10 15:02:04	error	Connection error: HTTPSConnectionPool(host='www.bridal-believe.co.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.bridal-believe.co.jp', port=443): Failed to resolve 'www.bridal-believe.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://mj-brain.com/	info@mj-brain.com	http://mj-brain.com/contact/	北海道・札幌のウェディング・ブライダル・コンサルティング企業		200	TRUE	2025-12-10 15:02:09	success																	
+http://benriya-himawari.com/			ブログ		200	TRUE	2025-12-10 15:02:20	success																	
+http://www.tmis.jp/index.html					0	TRUE	2025-12-10 15:02:26	error	Connection error: HTTPConnectionPool(host='www.tmis.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.tmis.jp', port=80): Failed to resolve 'www.tmis.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.mpartners.jp/		https://www.mpartners.jp/contact/	結婚相談所マリッジ（旧マリッジパートナーズ）【ご成婚実績最優秀賞】		200	TRUE	2025-12-10 15:02:37	success																	
+http://www.tantei-sendai.com/index.html					403	TRUE	2025-12-10 15:02:38	error	HTTP 403																
+http://www.k-eyeheart.jp/					0	TRUE	2025-12-10 15:02:44	error	Connection error: HTTPConnectionPool(host='www.k-eyeheart.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.k-eyeheart.jp', port=80): Failed to resolve 'www.k-eyeheart.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://iyataka.co.jp/			イヤタカグループ		200	TRUE	2025-12-10 15:02:56	success																	
+http://www.ja-life.co.jp/					0	TRUE	2025-12-10 15:03:55	error	Connection error: HTTPConnectionPool(host='www.ja-life.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.ja-life.co.jp', port=80): Failed to resolve 'www.ja-life.co.jp' ([Errno 11002] getaddrinfo failed)"))																
+https://www.ec-access.com:/	info@ec-access.com		婚活パーティー、街コンはイベントクラブアクセス | イベントクラブアクセス		200	TRUE	2025-12-10 15:04:00	success																	
+http://springgarden-web.com/					0	TRUE	2025-12-10 15:04:07	error	Connection error: HTTPConnectionPool(host='springgarden-web.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='springgarden-web.com', port=80): Failed to resolve 'springgarden-web.com' ([Errno 11001] getaddrinfo failed)"))																
+http://kodamaminami.com/					0	TRUE	2025-12-10 15:04:13	error	Connection error: HTTPConnectionPool(host='kodamaminami.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='kodamaminami.com', port=80): Failed to resolve 'kodamaminami.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.total-work.biz/index.html					0	TRUE	2025-12-10 15:04:20	error	Connection error: HTTPConnectionPool(host='www.total-work.biz', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='www.total-work.biz', port=80): Failed to resolve 'www.total-work.biz' ([Errno 11001] getaddrinfo failed)"))																
+http://kokusai-kekkon.biz/					0	TRUE	2025-12-10 15:05:23	error	Connection error: HTTPConnectionPool(host='kokusai-kekkon.biz', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='kokusai-kekkon.biz', port=80): Failed to resolve 'kokusai-kekkon.biz' ([Errno 11001] getaddrinfo failed)"))																
+http://chapelroad.jp/index.html					0	TRUE	2025-12-10 15:05:29	error	Connection error: HTTPConnectionPool(host='chapelroad.jp', port=80): Max retries exceeded with url: /index.html (Caused by NameResolutionError("HTTPConnection(host='chapelroad.jp', port=80): Failed to resolve 'chapelroad.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.grandhotel-hakusan.jp/					0	TRUE	2025-12-10 15:05:36	error	Connection error: HTTPSConnectionPool(host='www.grandhotel-hakusan.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='www.grandhotel-hakusan.jp', port=443): Failed to resolve 'www.grandhotel-hakusan.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://konkatsu-madoguchi.com/			ć•äąāŐĎčĆŻ		200	TRUE	2025-12-10 15:05:40	success																	
+https://access-info.jp/			アクセス情報株式会社		200	TRUE	2025-12-10 15:05:54	success																	
+https://marriage-stage.com					0	TRUE	2025-12-10 15:06:01	error	Connection error: HTTPSConnectionPool(host='marriage-stage.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='marriage-stage.com', port=443): Failed to resolve 'marriage-stage.com' ([Errno 11001] getaddrinfo failed)"))																
+https://www.j-style77.com/		https://www.j-style77.com/information/	軽井沢 アルバイト J-STYLE		200	TRUE	2025-12-10 15:06:15	success																	
+http://www6.ueda.ne.jp/~fine/			株式会社ファイン		200	TRUE	2025-12-10 15:06:19	success																	
+http://www.heian-mimaki.jp/					0	TRUE	2025-12-10 15:06:37	error	Connection error: HTTPConnectionPool(host='www.heian-mimaki.jp', port=80): Max retries exceeded with url: / (Caused by NewConnectionError("HTTPConnection(host='www.heian-mimaki.jp', port=80): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))																
+http://www.matsuibraidal.net/			愛知・岐阜・三重の結婚相談所まついブライダル　結婚相談・お見合いパーティーによる出会いをサポートします。		200	TRUE	2025-12-10 15:06:41	success																	
+https://h-bird.net/		https://h-bird.net/#wpcf7-f3930-p5381-o1	Ś≤źťėú ÁĶźŚ©öÁõłŤęáśČÄ „ÉŹ„Éü„É≥„āį„Éź„Éľ„ÉČ		200	TRUE	2025-12-10 15:06:49	success																	
+https://www.lifedesign888.com/index.html		https://www.lifedesign888.com/contact/index.html	あなたの生き方・進む方法をサポートしています。ライフデザイン株式会社		200	TRUE	2025-12-10 15:06:56	success																	
+https://www.dearwoman.net/			Dear Woman		200	TRUE	2025-12-10 15:07:18	success																	
+https://www.groove-fp.com/		https://www.groove-fp.com/contact/	株式会社グルーヴ		200	TRUE	2025-12-10 15:07:23	success																	
+http://ic-lionheart.com/index.php?FrontPage					0	FALSE	2025-12-10 15:07:24	error	Robots.txt disallows crawling																
+https://humantech.info/		https://humantech.info/contact/	Human Tech		200	TRUE	2025-12-10 15:07:32	success																	
+http://lifepartners-inc.jp/					0	TRUE	2025-12-10 15:08:11	error	Connection error: HTTPConnectionPool(host='lifepartners-inc.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='lifepartners-inc.jp', port=80): Failed to resolve 'lifepartners-inc.jp' ([Errno 11002] getaddrinfo failed)"))																
+https://www.cosmosp.com/		https://www.cosmosp.com/contact/	結婚相談所 コスモスプリマリエ|名古屋・安城・浜松の結婚相談所		200	TRUE	2025-12-10 15:08:17	success																	
+http://www.pita-com.jp/					0	TRUE	2025-12-10 15:09:21	error	Connection error: HTTPConnectionPool(host='www.pita-com.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.pita-com.jp', port=80): Failed to resolve 'www.pita-com.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://blanche-nagoya.jp/			名古屋の結婚相談所 ブランシェ		200	TRUE	2025-12-10 15:09:34	success																	
+http://www.kekkon-style.jp/		http://www.kekkon-style.jp/contact-form/	【2025年最新】全国のおすすめ		200	TRUE	2025-12-10 15:09:37	success																	
+https://www.fa-en.jp/		https://www.fa-en.jp/ContactInformation/	名古屋の		200	TRUE	2025-12-10 15:09:43	success																	
+http://www.m-sinen.jp/					0	TRUE	2025-12-10 15:09:50	error	Connection error: HTTPConnectionPool(host='www.m-sinen.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.m-sinen.jp', port=80): Failed to resolve 'www.m-sinen.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://www.giurare-kekkon.com/		https://www.giurare-kekkon.com/search.php	結婚はする？しない？幸せになりたい女性のための恋愛相談コラム【ジュラーレ】		200	TRUE	2025-12-10 15:09:59	success																	
+https://amouche.jp/		https://amouche.jp/contact-us/	結婚相談所アモーシェ		200	TRUE	2025-12-10 15:10:12	success																	
+http://www.nijikai.co.jp					0	TRUE	2025-12-10 15:10:18	error	Connection error: HTTPConnectionPool(host='www.nijikai.co.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.nijikai.co.jp', port=80): Failed to resolve 'www.nijikai.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.asurise.jp					0	TRUE	2025-12-10 15:10:24	error	Connection error: HTTPConnectionPool(host='www.asurise.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.asurise.jp', port=80): Failed to resolve 'www.asurise.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://wedding-bell.co.jp/					0	FALSE	2025-12-10 15:10:29	error	Robots.txt disallows crawling																
+http://www.sky-travel.jp/index.html	info@sky-travel.jp	http://www.sky-travel.jp/contact.html	スカイトラベル		200	TRUE	2025-12-10 15:10:31	success																	
+https://www.up-nagoya.co.jp/	info@up-nagoya.co.jp		株式会社アップ		200	TRUE	2025-12-10 15:10:37	success																	
+https://primvere-m.com/			名古屋の		200	TRUE	2025-12-10 15:10:45	success																	
+http://aiseisyun.com/		http://aiseisyun.com/contactform/	セイシュン日中国際結婚ブライダルセンター		200	TRUE	2025-12-10 15:10:50	success																	
+http://volant-f.com/					0	TRUE	2025-12-10 15:20:43	error	Connection error: HTTPConnectionPool(host='volant-f.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='volant-f.com', port=80): Failed to resolve 'volant-f.com' ([Errno 11001] getaddrinfo failed)"))																
+http://www.hot-bouquet.co.jp/1297143912564/					0	TRUE	2025-12-10 15:20:50	error	Connection error: HTTPConnectionPool(host='www.hot-bouquet.co.jp', port=80): Max retries exceeded with url: /1297143912564/ (Caused by NameResolutionError("HTTPConnection(host='www.hot-bouquet.co.jp', port=80): Failed to resolve 'www.hot-bouquet.co.jp' ([Errno 11001] getaddrinfo failed)"))																
+http://www.rid-u.jp/	info@rid-u.jp	http://www.rid-u.jp/#contact	株式会社 RID		200	TRUE	2025-12-10 15:20:52	success																	
+https://www.peach-bell.net/		https://www.peach-bell.net/contact.html	名古屋ハイクラス専門の結婚相談所【ピーチベル】入会条件有		200	TRUE	2025-12-10 15:20:59	success																	
+https://www.ryouen-merci.com/			愛知県の		200	TRUE	2025-12-10 15:21:03	success																	
+https://koinobori.club/			【30代・40代を応援】松山市の『婚活サポートこいのぼり』		200	TRUE	2025-12-10 15:21:10	success																	
+https://happy-bridal.jp/		https://happy-bridal.jp/	香川・愛媛・徳島・高知で婚活するなら結婚相談所ハッピーブライダル高松店・松山店・徳島店・高知店サテライト		200	TRUE	2025-12-10 15:21:16	success																	
+https://www.marriagetz.com/		https://www.marriagetz.com/contact/	関西・ハイクラスの		200	TRUE	2025-12-10 15:21:22	success																	
+https://moonlight2015.com/			【大阪・奈良の結婚相談所】婚活・お見合いに自信があるムーンライト		200	TRUE	2025-12-10 15:21:31	success																	
+https://konkatu-marriage.com/minalee/		https://konkatu-marriage.com/minalee/contact/?_field_12=minalee	婚活マリッジ ミナリー		200	TRUE	2025-12-10 15:21:40	success																	
+https://rs-bridal.jp/		https://rs-bridal.jp/contact	結婚相談所アールズブライダル – 愛知での婚活ならお任せください！		200	TRUE	2025-12-10 15:21:47	success																	
+https://suzuran20.amebaownd.com/	ahiru_fujimi@ca.thn.ne.jp	https://docs.google.com/forms/d/e/1FAIpQLSe7Ae39epUgcBHm9wOl0cQBl6J7XnESab0jbl481gnDCGzkfA/viewform?usp=sf_link	ご縁結び すずらん		200	TRUE	2025-12-10 15:21:50	success																	
+https://lemariage.jp/		https://lemariage.jp/contact.html	ル・マリアージュ		200	TRUE	2025-12-10 15:21:55	success																	
+https://casar.jp/		https://casar.jp/contact	名古屋の結婚相談所【婚活サロンカサール】		200	TRUE	2025-12-10 15:22:02	success																	
+https://www.feliciarc-tottori.com/		https://www.feliciarc-tottori.com/contact-8	鳥取で幸せを見つける		200	TRUE	2025-12-10 15:22:05	success																	
+https://enmusu.net/					0	FALSE	2025-12-10 15:22:07	error	Robots.txt disallows crawling																
+https://www.snowbell.info/		https://www.snowbell.info/contact/	婚活工房スノーベル｜婚活パーティー・お見合いイベント多数：大阪市西淀川区		200	TRUE	2025-12-10 15:22:16	success																	
+https://www.bridalmiyori.com/		https://www.bridalmiyori.com/contact/	結婚相談所 滋賀｜ブライダル三縁		200	TRUE	2025-12-10 15:22:23	success																	
+https://www.bridalstory.jp/		https://www.bridalstory.jp/contact/	30代・40代の		200	TRUE	2025-12-10 15:22:27	success																	
+https://willmine.jp/		https://willmine.jp/contact/	ハイクラスの		200	TRUE	2025-12-10 15:22:33	success																	
+https://beloved.jp/		https://beloved.jp/contact/	お見合い結婚相談所「JMA駒込」(結婚相談東京 文京区)		200	TRUE	2025-12-10 15:22:42	success																	
+https://harukuru-fuk.com/	info@haru-kuru.com	https://harukuru-fuk.com/contact/	福岡の結婚相談所なら創業12年の実績のある【ハルクル】		200	TRUE	2025-12-10 15:22:48	success																	
+http://www.happy-bh.com/		http://www.happy-bh.com/form.cgi	香川県の		200	TRUE	2025-12-10 15:22:52	success																	
+https://www.jbi-fm.com/		https://www.jbi-fm.com/contact	大阪（梅田）の結婚相談所・低価格な婚活は結婚相談所JBiがおすすめ！		200	TRUE	2025-12-10 15:23:03	success																	
+https://bridal-net-work.com/		https://bridal-net-work.com/contact/	京都結婚相談所・婚活ならブライダルサポートネットワーク｜京都結婚相談所・婚活ならブライダルサポートネットワーク		200	TRUE	2025-12-10 15:23:12	success																	
+https://acri-wedding.com/					0	FALSE	2025-12-10 15:23:14	error	Robots.txt disallows crawling																
+https://kekonsoudan.jp/		https://kekonsoudan.jp/contact.html	ハイクラス・医師・官公庁・安い結婚相談所【RM】大阪・東京・名古屋		200	TRUE	2025-12-10 15:23:20	success																	
+https://selamnakai.jimdofree.com/					403	TRUE	2025-12-10 15:23:23	error	HTTP 403																
+https://blessbridal.com/		https://blessbridal.com/contact/index.html	大阪梅田の		200	TRUE	2025-12-10 15:23:35	success																	
+https://www.premarri.com/		https://www.premarri.com/form/mail_form.php	結婚出会い、出会い結婚、真剣出会はプレマリへ		200	TRUE	2025-12-10 15:23:42	success																	
+http://www.brizplus.jp/					0	TRUE	2025-12-10 18:53:08	error	Connection error: HTTPConnectionPool(host='www.brizplus.jp', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPConnection(host='www.brizplus.jp', port=80): Failed to resolve 'www.brizplus.jp' ([Errno 11001] getaddrinfo failed)"))																
+https://j-marry.com/		https://pro.form-mailer.jp/fms/c6ccb3fe279632	J-MARRY結婚相談所		200	TRUE	2025-12-10 18:53:17	success																	
+https://mitukura-fp.com/		https://mitukura-fp.com/contact.html	満倉FP事務所		200	TRUE	2025-12-10 18:53:21	success																	
+https://okazaki-marriage.com/		https://okazaki-marriage.com/#wpcf7-f134-p24-o1	岡崎婚活結婚相談所ハピマリ｜岡崎市で理想の婚活するなら岡崎市の結婚相談所へ		200	TRUE	2025-12-10 18:53:57	success																	
+https://mariesupport.com/		https://mariesupport.com/contact.html#policy	大阪府・寝屋川市・門真市の婚活・結婚相談所マリエサポート		200	TRUE	2025-12-10 18:54:05	success																	
+https://mamiesheart.jp/		https://docs.google.com/forms/d/e/1FAIpQLSeb-iy2xHxbtg2i5wYpEPEPXTeHIIBrhvwJFIB7CQeTEvtcSw/viewform	結婚相談所　マミーズハート		200	TRUE	2025-12-10 18:54:13	success																	
+https://marry.jp/			結婚相談所 Marry（京都）｜30〜40代の婚活をLINEで完結・無料相談		200	TRUE	2025-12-10 18:54:24	success																	
+https://www.rifomicjapan.com/jim/			JIM（Japan International Marriage）		200	TRUE	2025-12-10 18:55:19	success																	
+https://www.be-bridal.com/index.html		https://www.be-bridal.com/contact.html	医師・歯科医師との結婚 1対1の理想マッチング紹介システム		200	TRUE	2025-12-10 18:55:28	success																	
+https://konkatsu-marimie.jp/		https://konkatsu-marimie.jp/contact/	婚活サポートマリッジミエール　三重 結婚相談所 – 婚活のことならお任せください！		200	TRUE	2025-12-10 18:55:37	success																	
+https://www.clubwith.tv/party/agency2/	info@clubwith.tv	https://www.clubwith.tv/party/agency2/contact/	ネットで簡単申込！来店不要のオンライン		200	TRUE	2025-12-10 18:55:54	success																	
+https://npo-nagomi.or.jp/news/		https://npo-nagomi.or.jp/contact/	お知らせ		200	TRUE	2025-12-10 18:56:10	success																	
+https://mariage-mari.com/		https://mariage-mari.com/contact/	結婚相談所マリアージュマリ  |  奈良県香芝市を中心に大阪府・京都・兵庫・結婚相談・再婚・婚活なら結婚相談所マリアージュマリにお任せください。		200	TRUE	2025-12-10 18:56:18	success																	
+https://www.office-nana.com/	info@office-nana.com		結婚相談室 office na・na（ナナ）/幸せになりたいあなたの背中をちょっと押して、あなたを応援します。		200	TRUE	2025-12-10 18:56:25	success																	
+

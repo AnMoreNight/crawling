@@ -36,7 +36,35 @@ class ContactFormCandidate:
 
 class ContactFormDetector:
     """Detects contact form URLs on websites."""
-    
+
+    @staticmethod
+    def _normalize_url_path(url: str) -> str:
+        """Normalize URL path for comparison (remove trailing slashes, unify contact/index.html, etc)."""
+        from urllib.parse import urlparse
+        path = urlparse(url).path.lower()
+        # Remove trailing slashes
+        if path.endswith('/') and path != '/':
+            path = path[:-1]
+        # Unify common contact page patterns
+        for pat in ['/index.html', '/index.htm', '/contactus.html', '/contact.html', '/inquiry.html']:
+            if path.endswith(pat):
+                path = path[:-len(pat)]
+        return path
+
+    @staticmethod
+    def _fuzzy_path_match(target: str, candidates: list) -> Optional[str]:
+        """Return the candidate URL with the highest path similarity to target."""
+        import difflib
+        if not target or not candidates:
+            return None
+        norm_target = ContactFormDetector._normalize_url_path(target)
+        norm_candidates = [ContactFormDetector._normalize_url_path(c) for c in candidates]
+        matches = difflib.get_close_matches(norm_target, norm_candidates, n=1, cutoff=0.7)
+        if matches:
+            idx = norm_candidates.index(matches[0])
+            return candidates[idx]
+        return None
+
     # Japanese keywords for contact pages
     JAPANESE_KEYWORDS = [
         'お問い合わせ',
@@ -87,7 +115,7 @@ class ContactFormDetector:
         self.fetcher = fetcher
         self.robots_checker = robots_checker
     
-    def detect_contact_form_url(self, root_url: str) -> Dict:
+    def detect_contact_form_url(self, root_url: str, reference_url: Optional[str] = None, log_candidates: Optional[list] = None) -> Dict:
         """
         Detect the best contact form URL for a website.
         
@@ -122,7 +150,6 @@ class ContactFormDetector:
             # Step 2: Identify potential contact pages
             candidates = self._identify_contact_candidates(internal_links, content, root_url)
             logger.info(f"Identified {len(candidates)} contact page candidates")
-            
             # Step 3 & 4: Fetch each candidate and score
             scored_candidates = []
             for candidate in candidates:
@@ -130,19 +157,28 @@ class ContactFormDetector:
                 if scored:
                     scored_candidates.append(scored)
                     logger.debug(f"Candidate {scored.url}: score={scored.score:.2f}, has_form={scored.has_form}")
-            
-            # Step 5: Select highest scoring candidate
+            # Log all candidates if requested
+            if log_candidates is not None:
+                log_candidates.extend([c.url for c in scored_candidates])
+            # Step 5: Select best candidate
             result = {
                 'form_url': None,
                 'candidates': [c.to_dict() for c in scored_candidates],
                 'remarks': ''
             }
-            
+            # Fuzzy/path match to reference if provided
+            if reference_url:
+                urls = [c.url for c in scored_candidates]
+                best_url = self._fuzzy_path_match(reference_url, urls)
+                if best_url:
+                    best = next(c for c in scored_candidates if c.url == best_url)
+                    result['form_url'] = best.url
+                    result['remarks'] = self._generate_remarks(best, scored_candidates) + ' (fuzzy/path match)'
+                    return result
+            # Otherwise, use best score
             if scored_candidates:
-                # Sort by score (descending)
                 scored_candidates.sort(key=lambda x: x.score, reverse=True)
                 best = scored_candidates[0]
-                
                 if best.score > 0:
                     result['form_url'] = best.url
                     result['remarks'] = self._generate_remarks(best, scored_candidates)
@@ -151,7 +187,6 @@ class ContactFormDetector:
                     result['remarks'] = 'No candidate scored above 0'
             else:
                 result['remarks'] = 'No contact form candidates found'
-            
             return result
             
         except Exception as e:
